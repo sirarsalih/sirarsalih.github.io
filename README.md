@@ -1,18 +1,23 @@
 # Setup
 
-I used the [Hydejack](http://qwtel.com/hydejack/) [Jekyll](http://jekyllrb.com) theme for this blog. Here are the steps required to setup development environment:
+I used the [Hydejack](http://qwtel.com/hydejack/) [Jekyll](http://jekyllrb.com) theme for this blog. Here are the steps required to set up the development environment:
 
-- Setting up Jekyll on Windows: https://jekyllrb.com/docs/windows/, http://jekyll-windows.juthilo.com/1-ruby-and-devkit/
-- Setting up GitHub pages with Jekyll: https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
-- On Windows, make sure your Gemfile looks like this:
+1. Fork this repo.
+2. Setting up Jekyll on Windows: https://jekyllrb.com/docs/windows/, http://jekyll-windows.juthilo.com/1-ruby-and-devkit/
+3. Setting up GitHub pages with Jekyll: https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
+4. On Windows, make sure your Gemfile has this:
 
-<p>
-<code>
+<br/><br/>
 source 'http://rubygems.org'
+<br/>
 gem 'github-pages'
+<br/>
 gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin/i
-</code>
-</p>
+<br/><br/>
+
+5. Start cmd, navigate to the repo and launch the site:
+
+<code>bundle exec jekyll serve</code>
 
 # Hydejack
 
