@@ -3,7 +3,7 @@
 I used the [Hydejack](http://qwtel.com/hydejack/) [Jekyll](http://jekyllrb.com) theme for this blog. Here are the steps required to set up the development environment:
 
 - Fork this repo
-- Setting up Jekyll on Windows: https://jekyllrb.com/docs/windows/ and http://jekyll-windows.juthilo.com/1-ruby-and-devkit/
+- Setting up Jekyll on Windows: https://jekyllrb.com/docs/windows/ (if the Ruby development kit installation fails, then install it from here: http://jekyll-windows.juthilo.com/1-ruby-and-devkit/)
 - Setting up GitHub pages with Jekyll: https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
 - On Windows, make sure your Gemfile looks like this:
 
