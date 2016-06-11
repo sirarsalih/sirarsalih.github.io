@@ -1,0 +1,43 @@
+# Permalinks
+permalink:        pretty
+
+# Setup
+url:              https://sirarsalih.github.io
+
+# Set to '' in case of hosting on `http://<your-github-name>.github.io`
+baseurl:          ''
+
+title:            Sirar's blog
+
+# Markdown enabled, however don't use more than one paragraph (enforced by `>`)
+description:      >
+  All things .NET, JavaScript, web tech and... octocats?
+
+# The tags listed as entries in the sidebar
+sidebar_tags:     
+
+# Fallback image and color if not overwritten for tag or post
+image:            /public/img/nap.jpg
+color:            '#A85641'
+
+author:
+  name:           'Sirar Salih'
+
+  # Setting social media usernames will add icons at the bottom of the sidebar
+  twitter:        sirarsalih
+  github:         sirarsalih
+
+  # Setting a disqus username will enable the comment section
+  disqus:         sirarsalih
+
+  # This photo will be used in the about section
+  photo:          https://avatars3.githubusercontent.com/u/7025090?v=3&s=460
+
+  # Markdown enabled, can use multiple paragraphs (enabled by `|`)
+  about:          |
+    Hi, I'm Sirar! I'm a passionate web developer. I like writing code and playing football.
+
+kramdown:
+  math_engine: mathjax
+  math_engine_opts:
+    preview: true
