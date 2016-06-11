@@ -15,7 +15,7 @@
 
  misc:
    name: Misc
-   image: /public/img/thekiss.jpg
+   image: /public/img/nutmeg.jpg
    color: '#949667'
    description: >
      A miscellaneous post.
