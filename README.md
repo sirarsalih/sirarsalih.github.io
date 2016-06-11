@@ -8,7 +8,9 @@ I used the [Hydejack](http://qwtel.com/hydejack/) [Jekyll](http://jekyllrb.com) 
 4. On Windows, make sure your Gemfile has this:
 
 source 'http://rubygems.org'
+<br/>
 gem 'github-pages'
+<br/>
 gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin/i
 
 5. Start cmd, navigate to the repo and launch the site:
