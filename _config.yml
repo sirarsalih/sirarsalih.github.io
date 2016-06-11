@@ -35,7 +35,7 @@ author:
 
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:          |
-    Hi, I'm Sirar! I'm a passionate web developer. I like writing code and playing football.
+    Hi, I'm Sirar! I'm a passionate web developer, I like writing code and playing football.
 
 kramdown:
   math_engine: mathjax
