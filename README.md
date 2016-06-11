@@ -7,13 +7,9 @@ I used the [Hydejack](http://qwtel.com/hydejack/) [Jekyll](http://jekyllrb.com) 
 3. Setting up GitHub pages with Jekyll: https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
 4. On Windows, make sure your Gemfile has this:
 
-<br/><br/>
 source 'http://rubygems.org'
-<br/>
 gem 'github-pages'
-<br/>
 gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin/i
-<br/><br/>
 
 5. Start cmd, navigate to the repo and launch the site:
 
