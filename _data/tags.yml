@@ -7,8 +7,15 @@
 # ~~~
 # mytag:
 #   name: My Tag
-#   image: /hydejack/public/img/hyde.jpg
+#   image: /public/img/hyde.jpg
 #   color: '#949667'
 #   description: >
 #     *My Tag* is an example of how to define a custom tag.
 # ~~~
+
+ misc:
+   name: Misc
+   image: /public/img/thekiss.jpg
+   color: '#949667'
+   description: >
+     A miscellaneous post.
