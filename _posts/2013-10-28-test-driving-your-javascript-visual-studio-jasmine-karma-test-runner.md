@@ -76,22 +76,28 @@ npm install karma</pre>
 <p>Karma is now configured, a "karma.conf" file is now generated - with the information that you answered - in your "spec" folder.</p>
 <p><strong>Step 4: Write and run your first Canary Test</strong></p>
 <p>Now that Karma is configured, we are ready to write and run our first canary test. In Visual Studio, in your "spec" folder, add a new JavaScript file called "logicSpec.js". In this file, write the following canary test:</p>
-<p>[code language="javascript"]describe(&quot;Testing the logic&quot;, function () {<br />
-    it(&quot;Should be true&quot;, function () {<br />
-        expect(true).toBe(true);<br />
-    });<br />
-});[/code]</p>
+```javascript 
+describe(Testing the logic, function () {
+    it(Should be true, function () {
+        expect(true).toBe(true);
+    });
+});
+```
 <p>Start cmd, and start Karma by typing:</p>
 <pre>karma start</pre>
 <p>Karma will now parse the "karma.conf" file, launch Chrome and run your test. A green execution means the test passed, red means it failed. Karma runs your tests each time you save your test file. You should get the following:</p>
-<p><a href="http://sirars.files.wordpress.com/2013/10/karma_success.png"><img class="alignnone size-medium wp-image-12" alt="karma_success" src="{{ site.baseurl }}/assets/karma_success.png?w=300" width="300" height="152" /></a></p>
+<p><a href="http://sirars.files.wordpress.com/2013/10/karma_success.png"><img class="alignnone size-medium wp-image-12" alt="karma_success" src="http://sirars.files.wordpress.com/2013/10/karma_success.png?w=300" width="300" height="152" /></a></p>
 <p>You have successfully run your first Canary Test. How about testing some logic? Create a folder in Visual Studio called "app" and add it to "Scripts", then add a "logic.js" in this folder. Create the following add function in your "logic.js":</p>
-<p>[code language="javascript"]function add(a, b) {<br />
-    return a + b;<br />
-}[/code]</p>
+```javascript 
+function add(a, b) {
+    return a + b;
+}
+```
 <p>Now test this function by adding the following test in your "logicSpec.js":</p>
-<p>[code language="javascript"]it(&quot;Should return 5 when 2 and 3 are passed&quot;, function() {<br />
-    var result = add(2, 3);<br />
-    expect(result).toEqual(5);<br />
-});[/code]</p>
+```javascript 
+it(Should return 5 when 2 and 3 are passed, function() {
+    var result = add(2, 3);
+    expect(result).toEqual(5);
+});
+```
 <p>Save your test file, you should now see that Karma successfully executed both of your tests. That's it! Jasmine is rich with functionality, so you can do lots of stuff. You can check out their site for more <a title="Jasmine" href="http://pivotal.github.io/jasmine/">here</a>.</p>
