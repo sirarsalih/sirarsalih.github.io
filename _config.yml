@@ -7,11 +7,11 @@ url:              https://sirarsalih.github.io
 # Set to '' in case of hosting on `http://<your-github-name>.github.io`
 baseurl:          ''
 
-title:            Sirar's blog
+title:            A developer's notes
 
 # Markdown enabled, however don't use more than one paragraph (enforced by `>`)
 description:      >
-  All things .NET, JavaScript, web and... octocats?
+  *By Sirar Salih*
 
 # The tags listed as entries in the sidebar
 sidebar_tags:     
