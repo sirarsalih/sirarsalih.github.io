@@ -29,188 +29,198 @@ author:
 <p>That will download the necessary JavaScript files into the "Scripts" folder in your project. Make sure to place your own AngularJS files (that you'll create in the next steps) inside of this folder.</p>
 <p><strong>Module</strong></p>
 <p>In order to embed and wire up AngularJS you'd want to define a module (which may contain sub-modules), a module declaratively specifies how your app should be bootstrapped. So you can create a "homeModule.js" file that can look like this:</p>
-<p>[code language="javascript"]angular<br />
- .module('myApp', [<br />
- 'myApp.controller.student',<br />
- 'myApp.service.data'<br />
- ])<br />
- .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {<br />
-      //Specify routings here<br />
-}]);<br />
-[/code]</p>
+```javascript 
+angular
+ .module('myApp', [
+ 'myApp.controller.student',
+ 'myApp.service.data'
+ ])
+ .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+      //Specify routings here
+}]);
+```
 <p>"myApp" is your main module, with a sub-module "myApp.controller.student" for your student controller and "myApp.service.data" for your data service. You can also configure routings if you'd like to route specific URLs and such.</p>
 <p><strong>Controller</strong></p>
 <p>Next up is to define a controller where you want to put all your logic, so you can create a "studentController.js" file that can look like this:</p>
-<p>[code language="javascript"]<br />
-angular<br />
-    .module('myApp.controller.student', [])<br />
-    .controller('StudentController', [<br />
-        '$scope',<br />
-        '$location',<br />
-        'dataService',<br />
-        function($scope, $location, dataService) {<br />
-            $scope.students = [];</p>
-<p>            $scope.delete = function(student) {<br />
-                var index = $scope.students.indexOf(student);<br />
-                $scope.students.splice(index, 1);<br />
-            };</p>
-<p>           $scope.create = function() {<br />
-                var student = { FirstMidName: &quot;New&quot;, LastName: &quot;New&quot;, EnrollmentDate: new Date() };<br />
-                $scope.students.push(student);<br />
-            };</p>
-<p>            $scope.post = function() {<br />
-                dataService<br />
-                    .post($scope.students)<br />
-                    .success(function(data, status, headers, config) {<br />
-                       location.reload();<br />
-                    });<br />
-            };</p>
-<p>            dataService<br />
-                .getStudents()<br />
-                .success(function (data, status, headers, config) {<br />
-                    $scope.students = data;<br />
-                });<br />
-        }]);<br />
-[/code]</p>
+```javascript 
+angular
+    .module('myApp.controller.student', [])
+    .controller('StudentController', [
+        '$scope',
+        '$location',
+        'dataService',
+        function($scope, $location, dataService) {
+            $scope.students = [];
+            $scope.delete = function(student) {
+                var index = $scope.students.indexOf(student);
+                $scope.students.splice(index, 1);
+            };
+           $scope.create = function() {
+                var student = { FirstMidName: "Test", LastName: "Test", EnrollmentDate: new Date() };
+                $scope.students.push(student);
+            };
+            $scope.post = function() {
+                dataService
+                    .post($scope.students)
+                    .success(function(data, status, headers, config) {
+                       location.reload();
+                    });
+            };
+           dataService
+                .getStudents()
+                .success(function (data, status, headers, config) {
+                    $scope.students = data;
+                });
+        }]);
+```
 <p>Note how AngularJS loads the student module that you defined earlier, and defines a controller called "StudentController" with the necessary parameters. Always use <code>$scope</code> when you write general controller behavior. Note how the <code>post()</code> and <code>getStudents()</code> functions use the data service to post and get our student data.</p>
 <p><strong>Data service</strong></p>
 <p>In most cases you want to have a service that retrieves data from the server for you, so you can create a "dataService.js" file that can look like this:</p>
-<p>[code language="javascript"]<br />
-angular<br />
-    .module('myApp.service.data', [])<br />
-    .factory('dataService', [<br />
-        '$http',<br />
-        function ($http) {</p>
-<p>            return {<br />
-                getStudents: function () {<br />
-                    return $http({<br />
-                       method: 'GET',<br />
-                        url: '/api/student'<br />
-                   });<br />
-               },</p>
-<p>                post: function (students) {<br />
-                    return $http({<br />
-                        method: 'POST',<br />
-                        url: '/api/student',<br />
-                        data: students<br />
-                    });<br />
-                },<br />
-            };<br />
-        }]);<br />
-[/code]</p>
+```javascript
+angular
+    .module('myApp.service.data', [])
+    .factory('dataService', [
+        '$http',
+        function ($http) {
+           return {
+                getStudents: function () {
+                    return $http({
+                       method: 'GET',
+                        url: '/api/student'
+                   });
+               },
+                post: function (students) {
+                    return $http({
+                        method: 'POST',
+                        url: '/api/student',
+                        data: students
+                    });
+                },
+            };
+        }]);
+```
 <p>AngularJS loads a factory here called "dataService" which we use in "studentController.js". As you can see, the <code>getStudents()</code> and <code>post()</code> functions are defined in here. Most importantly, the latter and the former point to a GET and POST methods with the URL "/api/student". In ASP.NET MVC, this is understood as pointing to the "StudentController" class (in an "api" folder), which we will create in the next step.</p>
 <p><strong>Api controller</strong></p>
 <p>The last step before wiring everything up, is to define the api controller for Entity Framework so our data service can communicate through this controller to retrieve our data. Create a "StudentController.cs" class and insert your own logic:</p>
-<p>[code language="csharp"]<br />
- public class StudentController : ApiController<br />
-    {<br />
-        public List Get()<br />
-        {<br />
-            //Get students<br />
-        }</p>
-<p>        [HttpPost]<br />
-        public void Post(List students)<br />
-        {<br />
-            //Post students<br />
-        }<br />
-    }<br />
-[/code]</p>
+```csharp
+public class StudentController : ApiController
+{
+    public List Get()
+    {
+        //Get students
+    }
+    [HttpPost]
+    public void Post(List students)
+    {
+        //Post students
+    }
+}
+```
 <p><strong>Wire everything up</strong></p>
 <p>Now that we have written all of our components, we are ready to wire everything up. Go to your HTML definition file, "_Layout.cshtml", and add <code>ng-app="myApp"</code> to the HTML tag:</p>
-<p>[code language="html"]<br />
-&lt;!DOCTYPE html&gt;<br />
-&lt;html ng-app=&quot;myApp&quot; lang=&quot;en&quot;&gt;<br />
-&lt;!----&gt;<br />
-&lt;/html&gt;<br />
-[/code]</p>
+```html
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+```
 <p>Go to "BundleConfig.cs" and bundle in the AngularJS files:</p>
-<p>[code language="csharp"]<br />
-public class BundleConfig<br />
-    {<br />
-       public static void RegisterBundles(BundleCollection bundles)<br />
-        {<br />
-            //Other bundles here</p>
-<p>            bundles.Add(new ScriptBundle(&quot;~/bundles/angular&quot;).Include(<br />
-                        &quot;~/Scripts/angular.js&quot;));</p>
-<p>            bundles.Add(new ScriptBundle(&quot;~/bundles/myApp&quot;).Include(<br />
-                        &quot;~/Scripts/app/homeModule.js&quot;,<br />
-                        &quot;~/Scripts/app/studentController.js&quot;,<br />
-                        &quot;~/Scripts/app/dataService.js&quot;));<br />
-        }<br />
-}<br />
-[/code]</p>
+```csharp
+public class BundleConfig
+    {
+       public static void RegisterBundles(BundleCollection bundles)
+        {
+            //Other bundles here
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                        "~/Scripts/angular.js"));
+            bundles.Add(new ScriptBundle("~/bundles/myApp").Include(
+                        "~/Scripts/app/homeModule.js",
+                        "~/Scripts/app/studentController.js",
+                        "~/Scripts/app/dataService.js"));
+        }
+}
+```
 <p>You're now all set to start using AngularJS! So you can go to a view in your project, write some HTML and bind it to your "StudentController". Below is an example code:</p>
-<p>[code language="html"]<br />
-&lt;div ng-controller=&quot;StudentController&quot;&gt;<br />
-    &lt;input type=&quot;submit&quot; value=&quot;Create&quot; ng-click=&quot;create()&quot; /&gt;<br />
-    &lt;div class=&quot;row-fluid&quot;&gt;<br />
-        &lt;table class=&quot;table table-condensed table-hover&quot;&gt;<br />
-            &lt;thead&gt;<br />
-                &lt;tr&gt;<br />
-                    &lt;th&gt;&lt;/th&gt;<br />
-                    &lt;th class=&quot;span2&quot;&gt;First Name&lt;/th&gt;<br />
-                    &lt;th class=&quot;span1&quot;&gt;Last Name&lt;/th&gt;<br />
-                    &lt;th class=&quot;span1&quot;&gt;Enrollment Date&lt;/th&gt;<br />
-                &lt;/tr&gt;<br />
-            &lt;/thead&gt;<br />
-            &lt;tbody&gt;<br />
-                &lt;tr ng-repeat=&quot;student in students&quot;&gt;<br />
-                    &lt;td&gt;&lt;input type=&quot;submit&quot; value=&quot;Delete&quot; ng-click=&quot;delete(student)&quot; /&gt;&lt;/td&gt;<br />
-                    &lt;td&gt;{{student.FirstMidName}}&lt;/td&gt;<br />
-                    &lt;td&gt;{{student.LastName}}&lt;/td&gt;<br />
-                    &lt;td&gt;{{student.EnrollmentDate}}&lt;/td&gt;<br />
-                &lt;/tr&gt;<br />
-            &lt;/tbody&gt;<br />
-        &lt;/table&gt;<br />
-    &lt;/div&gt;<br />
-    &lt;input type=&quot;submit&quot; value=&quot;Confirm&quot; ng-click=&quot;post()&quot; /&gt;<br />
-&lt;/div&gt;<br />
-[/code]</p>
-<p>Make special note of <code>ng-controller</code> which binds your controller. Then, for instance, by using <code>ng-repeat</code> you can loop through your local students collection and easily access each student and their properties. That's pretty much it, go ahead and test out the code!</p>
-<p><strong>Dependency Injection (unit testing)</strong></p>
-<p>As I mentioned earlier, AngularJS was designed to be testable from bottom up. So I thought it would be useful to include an example of testing our student controller, showing how dependency injection is done. We are here using <code>angular-mocks</code> (which comes with AngularJS when you install it) to create our mocks, and <a title="Jasmine" href="http://pivotal.github.io/jasmine/">Jasmine</a> for test syntax (check out <a title="Unit Testing JavaScript" href="http://sirars.com/2013/10/28/test-driving-your-javascript-visual-studio-jasmine-karma-test-runner/">my blog post on unit testing JavaScript</a>):<br />
-[code language="javascript"]<br />
-describe('Test the student controller', function() {</p>
-<p>    //Mock variables<br />
-    var rootScopeMock, httpBackendMock;</p>
-<p>    //Controller<br />
-    var myController;</p>
-<p>    //Mock the module (before each test)<br />
-    beforeEach(angular.mock.module('myApp'));</p>
-<p>    //Inject the mocks and controller (into each test)<br />
-    beforeEach(angular.mock.inject(function($rootScope, $controller, $httpBackend) {</p>
-<p>        //Mock default requests<br />
-        httpBackendMock = $httpBackend;<br />
-        httpBackendMock.whenGET('/api/student').respond({ code: 200, value: &quot;OK&quot; });</p>
-<p>        rootScopeMock = $rootScope.$new();</p>
-<p>        myController = $controller('StudentController', {<br />
-            $scope: rootScopeMock<br />
-        });<br />
-    }));</p>
-<p>    it('Should create new student when user creates a new student', function() {<br />
-        rootScopeMock.create();<br />
-        expect(rootScopeMock.students.length).toBe(1);<br />
-    });</p>
-<p>    it('Should delete student when user deletes a student', function() {<br />
-        var student = createStudentStub();<br />
-        rootScopeMock.students.push(student);<br />
-        rootScopeMock.delete(student);<br />
-        expect(rootScopeMock.students.length).toBe(0);<br />
-    });</p>
-<p>    it('Should post students when user confirms', function() {<br />
-        var student = createStudentStub();<br />
-        rootScopeMock.students.push(student);<br />
-        httpBackendMock.expectPOST('/api/student', rootScopeMock.students).respond();<br />
-        rootScopeMock.post();<br />
-    });</p>
-<p>    var createStudentStub = function() {<br />
-        var student = {<br />
-            FirstMidName: &quot;Test&quot;,<br />
-            LastName: &quot;Test&quot;,<br />
-            EnrollmentDate: new Date()<br />
-        };<br />
-        return student;<br />
-    };<br />
-});<br />
-[/code]<br />
-The code is pretty self explanatory, enjoy!</p>
+```html
+<div ng-controller="StudentController">
+<input type="submit" value="Create" ng-click="create()" />
+<div class="row-fluid">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th></th>
+<th class="span2">First Name</th>
+<th class="span1">Last Name</th>
+<th class="span1">Enrollment Date</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="student in students">
+<td><input type="submit" value="Delete" ng-click="delete(student)" /></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input type="submit" value="Confirm" ng-click="post()" />
+</div>
+```
+Make special note of <code>ng-controller</code> which binds your controller. Then, for instance, by using <code>ng-repeat</code> you can loop through your local students collection and easily access each student and their properties. That's pretty much it, go ahead and test out the code!
+## Dependency Injection (unit testing)
+As I mentioned earlier, AngularJS was designed to be testable from bottom up. So I thought it would be useful to include an example of testing our student controller, showing how dependency injection is done. We are here using <code>angular-mocks</code> (which comes with AngularJS when you install it) to create our mocks, and [Jasmine](http://pivotal.github.io/jasmine/) for test syntax (check out [my blog post on unit testing JavaScript](http://sirars.com/2013/10/28/test-driving-your-javascript-visual-studio-jasmine-karma-test-runner/)):
+
+```javascript
+describe('Test the student controller', function() {
+        //Mock variables
+        var rootScopeMock, httpBackendMock;
+        
+        //Controller
+        var myController;
+        
+        //Mock the module (before each test)
+        beforeEach(angular.mock.module('myApp'));
+        
+        //Inject the mocks and controller (into each test)
+        beforeEach(angular.mock.inject(function($rootScope, $controller, $httpBackend) {
+        
+        //Mock default requests
+        httpBackendMock = $httpBackend;
+        httpBackendMock.whenGET('/api/student').respond({ code: 200, value: "OK" });
+        
+        rootScopeMock = $rootScope.$new();
+        
+        myController = $controller('StudentController', {
+        $scope: rootScopeMock
+        });
+    }));
+    
+    it('Should create new student when user creates a new student', function() {
+        rootScopeMock.create();
+        expect(rootScopeMock.students.length).toBe(1);
+    });
+    
+    it('Should delete student when user deletes a student', function() {
+        var student = createStudentStub();
+        rootScopeMock.students.push(student);
+        rootScopeMock.delete(student);
+        expect(rootScopeMock.students.length).toBe(0);
+    });
+    
+    it('Should post students when user confirms', function() {
+        var student = createStudentStub();
+        rootScopeMock.students.push(student);
+        httpBackendMock.expectPOST('/api/student', rootScopeMock.students).respond();
+        rootScopeMock.post();
+    });
+    
+    var createStudentStub = function() {
+        var student = {
+        FirstMidName: "Test",
+        LastName: "Test",
+        EnrollmentDate: new Date()
+        };
+        return student;
+    };
+});
+```
+The code is pretty self explanatory, enjoy!
