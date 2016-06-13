@@ -30,39 +30,48 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p>One of the many lovely things about Angular is the fluid two-way data binding that we get with the framework. Although not entirely perfect when it comes down to performance, it saves us quite a lot of time and effort when writing web applications.</p>
-<p>When it comes to asynchronousy, however, it should be noted that doing changes to your <code>$scope</code> data does not propagate to the view implicitly (!). In other words, if you do a change to a <code>$scope</code> variable from asynchronous context, the change is not reflected in the view. Let's look at an example. Consider the following controller that uses JavaScript's asynchronous <code>setInterval</code> function to update a counter every second:<br />
-[code language="javascript"]<br />
-function Ctrl ($scope) {<br />
-    $scope.counter = 0;</p>
-<p>    setInterval(function() {<br />
-        $scope.counter++;<br />
-    }, 1000);<br />
-}<br />
-[/code]<br />
-This code looks pretty good and dandy, right? Unfortunately, no. Although the counter does get updated every second, it does not propagate the change to the view. There are a couple of ways to solve this issue.</p>
-<p><strong>Invoking $apply Manually</strong></p>
-<p>The simplest and most straightforward way is to invoke <code>$apply</code> manually in the asynchronous context. Consider the following change to our initial example (lines 5 - 7):<br />
-[code language="javascript"]<br />
-function Ctrl ($scope) {<br />
-    $scope.counter = 0;</p>
-<p>    setInterval(function() {<br />
-        $scope.$apply(function () {<br />
-            $scope.counter++;<br />
-        });<br />
-    }, 1000);<br />
-}<br />
-[/code]<br />
-This change will force the counter updates through to the view.</p>
-<p><strong>Using Angular's Asynchronous Services</strong></p>
-<p>This approach is case specific. For instance, you can use the services <code>$interval</code> or <code>$timeout</code>, which actually behind the scenes invoke <code>$apply</code> - relieving you from doing so manually. Considering our initial example, we can therefore inject and use $interval in our controller instead:<br />
-[code language="javascript"]<br />
-function Ctrl ($scope, $interval) {<br />
-    $scope.counter = 0;</p>
-<p>    $interval(function () {<br />
-        $scope.counter++;<br />
-    }, 1000);<br />
-}<br />
-[/code]<br />
-As the previous approach, this will propagate the counter updates to the view. I recommend using Angular's services wherever this is possible and seems appropriate to the case at hand. However, always keep in mind that such services invoke <code>$apply</code> for you behind the scenes.</p>
+One of the many lovely things about Angular is the fluid two-way data binding that we get with the framework. Although not entirely perfect when it comes down to performance, it saves us quite a lot of time and effort when writing web applications.
+When it comes to asynchronousy, however, it should be noted that doing changes to your ```$scope``` data does not propagate to the view implicitly (!). In other words, if you do a change to a ```$scope``` variable from asynchronous context, the change is not reflected in the view. Let's look at an example. Consider the following controller that uses JavaScript's asynchronous ```setInterval``` function to update a counter every second:
+    
+```javascript
+function Ctrl ($scope) {
+    $scope.counter = 0;
+    
+    setInterval(function() {
+        $scope.counter++;
+    }, 1000);
+}
+```
+
+This code looks pretty good and dandy, right? Unfortunately, no. Although the counter does get updated every second, it does not propagate the change to the view. There are a couple of ways to solve this issue.
+<strong>Invoking $apply Manually</strong>
+The simplest and most straightforward way is to invoke ```$apply``` manually in the asynchronous context. Consider the following change to our initial example (lines 5 - 7):
+    
+```javascript
+function Ctrl ($scope) {
+    $scope.counter = 0;
+    
+    setInterval(function() {
+        $scope.$apply(function () {
+            $scope.counter++;
+        });
+    }, 1000);
+}
+```
+
+This change will force the counter updates through to the view.
+<strong>Using Angular's Asynchronous Services</strong>
+This approach is case specific. For instance, you can use the services ```$interval``` or ```$timeout```, which actually behind the scenes invoke ```$apply``` - relieving you from doing so manually. Considering our initial example, we can therefore inject and use $interval in our controller instead:
+    
+```javascript
+function Ctrl ($scope, $interval) {
+    $scope.counter = 0;
+
+    $interval(function () {
+        $scope.counter++;
+    }, 1000);
+}
+```
+
+As the previous approach, this will propagate the counter updates to the view. I recommend using Angular's services wherever this is possible and seems appropriate to the case at hand. However, always keep in mind that such services invoke <code>$apply</code> for you behind the scenes.
 <p>Hope you enjoyed this Sunday's little reading! :)</p>

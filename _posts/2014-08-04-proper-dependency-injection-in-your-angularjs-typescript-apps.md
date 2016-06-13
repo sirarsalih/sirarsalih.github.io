@@ -25,42 +25,57 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p>I've witnessed quite a lot of legacy AngularJS TypeScript code (<a href="http://sirarsalih.com/2014/01/28/when-two-forces-meet-angularjs-typescript/">yes, including my very own</a>) where dependency injection is done in an impractical way. The most common way of doing dependency injection, is by manually injecting the dependencies while loading your AngularJS components and their accommodating TypeScript classes. What this basically means is that, while injecting a dependency, you have to do this three times (!). Not only that, all three times have to be similar in order for the injection (string matching) to work. Consider the following example:</p>
-<p>[code language="javascript"]<br />
-angular.module(&quot;myApp&quot;, []).controller(&quot;MyController&quot;, [&quot;$scope&quot;, &quot;MyService&quot;, ($scope, MyService)<br />
-    =&gt; new Application.Controllers.MyController($scope, MyService)]);<br />
-[/code]</p>
-<p>[code language="javascript"]<br />
-module Application.Controllers {</p>
-<p>    import Services = Application.Services;</p>
-<p>    export class MyController {</p>
-<p>        scope: any;<br />
-        myService: Services.IMyService;</p>
-<p>        constructor($scope: ng.IScope, myService: Services.IMyService) {<br />
-            this.scope = $scope;<br />
-            this.myService = myService;<br />
-        }<br />
-    }<br />
-}<br />
-[/code]</p>
+I've witnessed quite a lot of legacy AngularJS TypeScript code (<a href="http://sirarsalih.com/2014/01/28/when-two-forces-meet-angularjs-typescript/">yes, including my very own</a>) where dependency injection is done in an impractical way. The most common way of doing dependency injection, is by manually injecting the dependencies while loading your AngularJS components and their accommodating TypeScript classes. What this basically means is that, while injecting a dependency, you have to do this three times (!). Not only that, all three times have to be similar in order for the injection (string matching) to work. Consider the following example:
+
+```javascript
+angular.module("myApp", []).controller("MyController", ["$scope", "MyService", ($scope, MyService)
+    => new Application.Controllers.MyController($scope, MyService)]);
+```
+
+```javascript
+module Application.Controllers {
+ 
+    import Services = Application.Services;
+ 
+    export class MyController {
+ 
+        scope: any;
+        myService: Services.IMyService;
+         
+        constructor($scope: ng.IScope, myService: Services.IMyService) {
+            this.scope = $scope;
+            this.myService = myService;
+        }
+    }
+}
+```
+
 <p><code>MyController</code> is a class that takes in two dependencies - <code>$scope</code> and <code>MyService</code>. However, in the first code block, the injection itself is written three times (lines 1 and 2). Not only does this result in a maintenance hell, it greatly affects the readability of the code. </p>
-<p>So, how do we solve this issue? Simple, we use AngularJS' <code>$inject</code> property to do the injection in our TypeScript class. In <code>MyController</code>, we statically use <code>$inject</code> and define the dependencies like so (line 10):</p>
-<p>[code language="javascript"]<br />
-module Application.Controllers {</p>
-<p>    import Services = Application.Services;</p>
-<p>    export class MyController {</p>
-<p>        scope: any;<br />
-        myService: Services.IMyService;</p>
-<p>        static $inject = [&quot;$scope&quot;, &quot;MyService&quot;];</p>
-<p>        constructor($scope: ng.IScope, myService: Services.IMyService) {<br />
-            this.scope = $scope;<br />
-            this.myService = myService;<br />
-        }<br />
-    }<br />
-}<br />
-[/code]</p>
-<p>And then simply change the wiring like so:</p>
-<p>[code language="javascript"]<br />
-angular.module(&quot;myApp&quot;, []).controller(&quot;MyController&quot;, Application.Controllers.MyController);<br />
-[/code]</p>
+So, how do we solve this issue? Simple, we use AngularJS' <code>$inject</code> property to do the injection in our TypeScript class. In <code>MyController</code>, we statically use <code>$inject</code> and define the dependencies like so (line 10):
+
+```javascript
+module Application.Controllers {
+ 
+    import Services = Application.Services;
+ 
+    export class MyController {
+ 
+        scope: any;
+        myService: Services.IMyService;
+        
+        static $inject = ["$scope", "MyService"];
+
+        constructor($scope: ng.IScope, myService: Services.IMyService) {
+            this.scope = $scope;
+            this.myService = myService;
+        }
+    }
+}
+```
+
+And then simply change the wiring like so:
+
+```javascript
+angular.module("myApp", []).controller("MyController", Application.Controllers.MyController);
+```
 <p>Notice how elegant the wiring looks? No explicit injection that we need to worry about, all we need is to inspect the class itself to find the dependencies.</p>

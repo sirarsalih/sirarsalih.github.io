@@ -25,4 +25,4 @@ author:
 ---
 <p>I'm very happy and excited to announce that <a href="http://2014.javazone.no/presentation.html?id=e72daf93">I will be speaking at JavaZone 2014</a>! If you did not know already, <a href="http://2014.javazone.no/">JavaZone</a> is the largest IT conference in Norway. Up to 2500 software engineers and developers gather each year in Oslo during September to attend 3 days packed with presentations, lightning talks and workshops!</p>
 <p>I will be doing a 60 minute presentation on the topic "TDD with AngularJS and TypeScript". Make sure to book your ticket today and I will see you in September! :)</p>
-<p><a href="http://2014.javazone.no/presentation.html?id=e72daf93"><img src="{{ site.baseurl }}/assets/capture.png" /></a></p>
+<p><a href="http://2014.javazone.no/presentation.html?id=e72daf93"><img src="https://sirars.files.wordpress.com/2014/07/capture.png" /></a></p>

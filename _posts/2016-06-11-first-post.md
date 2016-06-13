@@ -4,4 +4,4 @@ title: New Blog
 tags: [misc]
 ---
 
-First post in the new blog! My old blog can be found [here](https://sirarsalih.com/).
+Welcome to the new blog! I've migrated all posts from the old blog, which can be found [here](https://sirars.wordpress.com/).

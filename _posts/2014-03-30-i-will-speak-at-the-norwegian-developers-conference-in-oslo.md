@@ -22,4 +22,4 @@ author:
   last_name: ''
 ---
 <p>It's finally official, I will be speaking at the <a href="http://ndcoslo.com/">Norwegian Developers Conference</a> in Oslo this year! If you didn't know already, NDC is a famous worldwide conference that takes place in June and lasts for five whole days (two days pre-conference workshops). This means a great deal to me, since it is the first time that I will do a talk there. NDC is my favorite conference and I always wished this day would come, so I am very excited! The best thing of all, I have been granted two full hours at the conference. I will be doing a <a href="http://ndcoslo.oktaset.com/t-18016">two part workshop about test driven development in AngularJS and TypeScript</a>. So make sure to book your conference tickets today and I will see you in June! :)</p>
-<p><a href="http://ndcoslo.com/"><img src="{{ site.baseurl }}/assets/capture2.png" /></a></p>
+<p><a href="http://ndcoslo.com/"><img src="http://sirars.files.wordpress.com/2014/03/capture2.png" /></a></p>
