@@ -8,11 +8,6 @@ status: publish
 categories:
 - Development
 tags: [misc]
-- AngularJS
-- HTML5 Developer Conference
-- San Francisco
-- TDD
-- TypeScript
 meta:
   _edit_last: '54045106'
   _publicize_pending: '1'
