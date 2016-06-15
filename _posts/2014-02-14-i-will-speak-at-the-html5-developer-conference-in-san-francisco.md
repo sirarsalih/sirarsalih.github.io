@@ -7,7 +7,7 @@ published: true
 status: publish
 categories:
 - Development
-tags: [development]
+tags: [misc]
 - AngularJS
 - HTML5 Developer Conference
 - San Francisco
