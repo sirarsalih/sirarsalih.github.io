@@ -19,3 +19,10 @@
    color: '#949667'
    description: >
      A miscellaneous post.
+     
+development:
+   name: Development
+   image: /public/img/nutmeg.jpg
+   color: '#949667'
+   description: >
+     A development post.
