@@ -7,7 +7,7 @@ published: true
 status: publish
 categories:
 - Unit Testing
-tags: [development]
+tags:
 - Jasmine Testing Framework
 - JavaScript
 - Karma Test Runner
