@@ -7,7 +7,7 @@ published: true
 status: publish
 categories:
 - Unit Testing
-tags:
+tags: [development]
 - Continuous Testing
 - JavaScript
 - Karma
