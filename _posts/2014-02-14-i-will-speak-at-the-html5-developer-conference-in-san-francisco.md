@@ -7,7 +7,7 @@ published: true
 status: publish
 categories:
 - Development
-tags: [development]
+tags: [misc]
 meta:
   _edit_last: '54045106'
   _publicize_pending: '1'
