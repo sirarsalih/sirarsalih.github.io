@@ -2,7 +2,8 @@
 permalink:        pretty
 
 # Setup
-url:              https://sirarsalih.github.io
+url:              https://sirarsalih.com
+enforce_ssl:      sirarsalih.com
 
 # Set to '' in case of hosting on `http://<your-github-name>.github.io`
 baseurl:          ''
