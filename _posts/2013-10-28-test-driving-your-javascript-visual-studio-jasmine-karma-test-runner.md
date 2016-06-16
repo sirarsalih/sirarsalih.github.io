@@ -7,14 +7,7 @@ published: true
 status: publish
 categories:
 - Unit Testing
-tags:
-- Jasmine Testing Framework
-- JavaScript
-- Karma Test Runner
-- Programming
-- Tests
-- Unit testing
-- Visual Studio
+tags: [js]
 meta:
   _edit_last: '54045106'
   _publicize_pending: '1'

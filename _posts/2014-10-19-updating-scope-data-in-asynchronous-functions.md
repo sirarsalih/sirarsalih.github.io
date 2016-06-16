@@ -7,12 +7,7 @@ published: true
 status: publish
 categories:
 - Development
-tags:
-- "$scope"
-- AngularJS
-- Asynchronous
-- JavaScript
-- Two-way data binding
+tags: [js]
 meta:
   _wpas_skip_facebook: '1'
   _wpas_skip_google_plus: '1'

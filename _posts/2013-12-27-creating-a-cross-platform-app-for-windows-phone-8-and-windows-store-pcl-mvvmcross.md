@@ -7,16 +7,7 @@ published: true
 status: publish
 categories:
 - Development
-tags:
-- ".NET"
-- MVVM
-- MvvmCross
-- PCL
-- Portable Class Library
-- Visual Studio
-- Windows Phone 8
-- Windows Store
-- Xamarin
+tags: [dotnet]
 meta:
   _edit_last: '54045106'
   _publicize_pending: '1'

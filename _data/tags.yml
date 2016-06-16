@@ -13,16 +13,24 @@
 #     *My Tag* is an example of how to define a custom tag.
 # ~~~
 
- misc:
+misc:
    name: Misc
    image: /public/img/nutmeg.jpg
    color: '#949667'
    description: >
-     A miscellaneous post.
-     
-development:
-   name: Development
+     A miscellaneous post.     
+
+js:
+   name: JavaScript
    image: /public/img/nutmeg.jpg
    color: '#949667'
    description: >
-     A development post.
+     A JavaScript related post.
+     
+dotnet:
+   name: .NET
+   image: /public/img/nutmeg.jpg
+   color: '#949667'
+   description: >
+     A .NET related post.     
+

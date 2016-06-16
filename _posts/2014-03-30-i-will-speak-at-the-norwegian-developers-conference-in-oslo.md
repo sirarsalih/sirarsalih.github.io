@@ -7,10 +7,7 @@ published: true
 status: publish
 categories:
 - Development
-tags:
-- NDC
-- Norwegian Developers Conference
-- TDD AngularJS TypeScript
+tags: [misc]
 meta:
   _edit_last: '54045106'
   _publicize_pending: '1'

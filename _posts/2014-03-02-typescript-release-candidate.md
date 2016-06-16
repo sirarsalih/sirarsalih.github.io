@@ -7,12 +7,7 @@ published: true
 status: publish
 categories:
 - Development
-tags:
-- JavaScript
-- TypeScript
-- TypeScript RC
-- Visual Studio
-- Visual Studio 2013
+tags: [js]
 meta:
   _edit_last: '54045106'
   _publicize_pending: '1'

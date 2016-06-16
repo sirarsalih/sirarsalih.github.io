@@ -7,12 +7,7 @@ published: true
 status: publish
 categories:
 - Unit Testing
-tags:
-- Continuous Testing
-- JavaScript
-- Karma
-- Karma Test Runner
-- TeamCity
+tags: [js]
 meta:
   _edit_last: '54045106'
   _publicize_pending: '1'

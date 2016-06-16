@@ -7,11 +7,7 @@ published: true
 status: publish
 categories:
 - Unit Testing
-tags:
-- Anonymous functions
-- Jasmine
-- JavaScript
-- Unit testing anonymous JavaScript functions
+tags: [js]
 meta:
   _edit_last: '54045106'
   _publicize_pending: '1'

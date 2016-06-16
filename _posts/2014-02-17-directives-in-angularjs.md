@@ -7,12 +7,7 @@ published: true
 status: publish
 categories:
 - Development
-tags:
-- AngularJS
-- AngularJS Directives
-- Directives
-- HTML
-- JavaScript
+tags: [js]
 meta:
   _edit_last: '54045106'
   _publicize_pending: '1'

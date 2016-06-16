@@ -7,18 +7,7 @@ published: true
 status: publish
 categories:
 - Development
-tags:
-- CSR
-- Debian
-- Debian Wheezy
-- JavaScript
-- Linux
-- Node
-- Node Server
-- RaspberryPi
-- RasPi
-- REST
-- SSL
+tags: [js]
 meta:
   _edit_last: '54045106'
   geo_public: '0'

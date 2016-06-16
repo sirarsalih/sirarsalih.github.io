@@ -7,11 +7,7 @@ published: true
 status: publish
 categories:
 - Development
-tags:
-- Angular
-- Angular2
-- JavaScript
-- TypeScript
+tags: [misc]
 meta:
   _edit_last: '54045106'
   geo_public: '0'

@@ -6,7 +6,7 @@ type: post
 published: true
 status: publish
 categories: []
-tags: []
+tags: [misc]
 meta:
   _edit_last: '54045106'
   _publicize_pending: '1'

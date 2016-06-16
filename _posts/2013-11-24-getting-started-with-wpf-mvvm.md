@@ -7,11 +7,7 @@ published: true
 status: publish
 categories:
 - Development
-tags:
-- MVVM Light Toolkit
-- WPF
-- WPF MVVM
-- XAML
+tags: [dotnet]
 meta:
   _edit_last: '54045106'
   _publicize_pending: '1'

@@ -7,10 +7,7 @@ published: true
 status: publish
 categories:
 - Development
-tags:
-- AngularJS
-- Dependency Injection
-- TypeScript
+tags: [js]
 meta:
   _edit_last: '54045106'
   geo_public: '0'
