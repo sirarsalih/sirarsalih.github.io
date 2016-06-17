@@ -15,21 +15,21 @@
 
 misc:
    name: Misc
-   image: /public/img/nutmeg.jpg
+   image: /public/img/realistnap.jpg
    color: '#949667'
    description: >
      A miscellaneous post.     
 
 js:
    name: JavaScript
-   image: /public/img/nutmeg.jpg
+   image: /public/img/realistnap.jpg
    color: '#949667'
    description: >
      A JavaScript related post.
      
 dotnet:
    name: .NET
-   image: /public/img/nutmeg.jpg
+   image: /public/img/realistnap.jpg
    color: '#949667'
    description: >
      A .NET related post.     
