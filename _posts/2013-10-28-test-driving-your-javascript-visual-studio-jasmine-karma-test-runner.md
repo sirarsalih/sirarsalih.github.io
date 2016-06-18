@@ -78,7 +78,7 @@ describe(Testing the logic, function () {
 <p>Start cmd, and start Karma by typing:</p>
 <pre>karma start</pre>
 <p>Karma will now parse the "karma.conf" file, launch Chrome and run your test. A green execution means the test passed, red means it failed. Karma runs your tests each time you save your test file. You should get the following:</p>
-<p><a href="http://sirars.files.wordpress.com/2013/10/karma_success.png"><img class="alignnone size-medium wp-image-12" alt="karma_success" src="http://sirars.files.wordpress.com/2013/10/karma_success.png?w=300" width="300" height="152" /></a></p>
+<p><a href="https://sirars.files.wordpress.com/2013/10/karma_success.png"><img class="alignnone size-medium wp-image-12" alt="karma_success" src="https://sirars.files.wordpress.com/2013/10/karma_success.png?w=300" width="300" height="152" /></a></p>
 <p>You have successfully run your first Canary Test. How about testing some logic? Create a folder in Visual Studio called "app" and add it to "Scripts", then add a "logic.js" in this folder. Create the following add function in your "logic.js":</p>
 ```javascript 
 function add(a, b) {

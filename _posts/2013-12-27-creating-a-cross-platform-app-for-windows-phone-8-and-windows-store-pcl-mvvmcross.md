@@ -22,13 +22,13 @@ author:
 <p>PCL comes out of the box with Visual Studio 2012, but I recommend that you use <a href="http://www.visualstudio.com/downloads/download-visual-studio-vs" title="Visual Studio 2013">Visual Studio 2013</a>. The reason is that you can choose to include the <a href="http://developer.windowsphone.com/en-us/downloadsdk" title="Windows Phone 8 SDK">Windows Phone 8 SDK</a> upon installation, and the Windows Store templates come out of the box with VS 2013. The Windows Phone 8 emulator uses Hyper-V, and since we will be creating an app for Windows Store, that means you'll need at least <a href="http://www.microsoft.com/en-us/windows/business/default.aspx" title="Windows 8 Professional">Windows 8 Professional</a> installed on your machine. Once you've got VS 2013 with the Windows Phone 8 SDK installed on your Windows 8 Professional OS, we're ready to get started.</p>
 <p><strong>Let's Get Started</strong></p>
 <p>Start Visual Studio 2013 and create a new project, choose Windows Phone:</p>
-<p><a href="http://sirars.files.wordpress.com/2013/12/capture1.png"><img src="http://sirars.files.wordpress.com/2013/12/capture1.png?w=300" alt="Capture" width="300" height="213" class="alignnone size-medium wp-image-199" /></a></p>
+<p><a href="https://sirars.files.wordpress.com/2013/12/capture1.png"><img src="https://sirars.files.wordpress.com/2013/12/capture1.png?w=300" alt="Capture" width="300" height="213" class="alignnone size-medium wp-image-199" /></a></p>
 <p>Right click the solution and choose Add -&gt; New Project... Choose Windows Store:</p>
-<p><a href="http://sirars.files.wordpress.com/2013/12/capture21.png"><img src="http://sirars.files.wordpress.com/2013/12/capture21.png?w=300" alt="Capture2" width="300" height="211" class="alignnone size-medium wp-image-201" /></a></p>
+<p><a href="https://sirars.files.wordpress.com/2013/12/capture21.png"><img src="https://sirars.files.wordpress.com/2013/12/capture21.png?w=300" alt="Capture2" width="300" height="211" class="alignnone size-medium wp-image-201" /></a></p>
 <p>Right click solution again and choose Add -&gt; New Project... Choose Portable Class Library:</p>
-<p><a href="http://sirars.files.wordpress.com/2013/12/capture3.png"><img src="http://sirars.files.wordpress.com/2013/12/capture3.png?w=300" alt="Capture3" width="300" height="209" class="alignnone size-medium wp-image-202" /></a></p>
+<p><a href="https://sirars.files.wordpress.com/2013/12/capture3.png"><img src="https://sirars.files.wordpress.com/2013/12/capture3.png?w=300" alt="Capture3" width="300" height="209" class="alignnone size-medium wp-image-202" /></a></p>
 <p>Make sure the following are checked:</p>
-<p><a href="http://sirars.files.wordpress.com/2013/12/capture4.png"><img src="http://sirars.files.wordpress.com/2013/12/capture4.png?w=300" alt="Capture4" width="300" height="293" class="alignnone size-medium wp-image-203" /></a></p>
+<p><a href="https://sirars.files.wordpress.com/2013/12/capture4.png"><img src="https://sirars.files.wordpress.com/2013/12/capture4.png?w=300" alt="Capture4" width="300" height="293" class="alignnone size-medium wp-image-203" /></a></p>
 <p>Note: You can target other platforms by installing <a href="http://xamarin.com/?gclid=CI65ktum0LsCFYFe3godU08A-g" title="Xamarin">Xamarin</a>, but this is not required in this tutorial.</p>
 We will start by setting up our PCL. First, delete ```Class1.cs```. Now right click the PCL project and choose Manage NuGet Packages... Search for "mvvm cross" and install "MvvmCross" through NuGet. Delete the ```ToDo-MvvmCross``` folder. Go to ```FirstViewModel.cs``` and change "Hello MvvmCross" to "Hello World!":
 
@@ -155,7 +155,7 @@ Now take a look at ```FirstView.xaml``` and how it binds to our view model:
 ```
 
 <p>That's it! Build and run the Phone project, the emulator should start up:</p>
-<p><a href="http://sirars.files.wordpress.com/2013/12/capture5.png"><img src="http://sirars.files.wordpress.com/2013/12/capture5.png?w=200" alt="Capture5" width="200" height="300" class="alignnone size-medium wp-image-213" /></a></p>
+<p><a href="https://sirars.files.wordpress.com/2013/12/capture5.png"><img src="https://sirars.files.wordpress.com/2013/12/capture5.png?w=200" alt="Capture5" width="200" height="300" class="alignnone size-medium wp-image-213" /></a></p>
    
 Let's move on to the Windows Store project. Delete ```MainPage.xaml```, right click the project and choose Manage NuGet Packages... Search for "mvvm cross" and install "MvvmCross" through NuGet. Delete the ```ToDo-MvvmCross``` folder. Now right click References and choose Add Reference... Click on Solution -&gt; Projects and choose the PCL project. Now navigate to the ```Setup.cs``` class, and make sure it looks correct:
 
@@ -202,7 +202,7 @@ start.Start();
 
 Delete ```FirstView.xaml```. Right click the ```Views``` folder and add a new Basic Page, call it "FirstView.xaml":
 
-<p><a href="http://sirars.files.wordpress.com/2013/12/capture61.png"><img src="http://sirars.files.wordpress.com/2013/12/capture61.png?w=300" alt="Capture6" width="300" height="207" class="alignnone size-medium wp-image-221" /></a></p>
+<p><a href="https://sirars.files.wordpress.com/2013/12/capture61.png"><img src="https://sirars.files.wordpress.com/2013/12/capture61.png?w=300" alt="Capture6" width="300" height="207" class="alignnone size-medium wp-image-221" /></a></p>
 You'll note that a new folder called ```Common``` with helper classes was added to the project. Go to ```FirstView.xaml.cs``` and make the class inherit from ```MvxStorePage``` instead of ```Page```. Remove the methods ```OnNavigatedTo``` and ```OnNavigatedFrom methods```. The class should now look like the following (comments removed):
 
 ```csharp
@@ -303,5 +303,5 @@ Now navigate to ```FirstView.xaml``` and reflect the changes that you made in th
 ```
 
 <p>Build and run the Store app:</p>
-<p><a href="http://sirars.files.wordpress.com/2013/12/capture7.png"><img src="http://sirars.files.wordpress.com/2013/12/capture7.png?w=300" alt="Capture7" width="300" height="187" class="alignnone size-medium wp-image-224" /></a></p>
+<p><a href="https://sirars.files.wordpress.com/2013/12/capture7.png"><img src="https://sirars.files.wordpress.com/2013/12/capture7.png?w=300" alt="Capture7" width="300" height="187" class="alignnone size-medium wp-image-224" /></a></p>
 <p>And we are done! Both applications now use the logic written in the Portable Class Library, and you only need to write the logic once. Pretty cool! Now you can go ahead and make some awesome cross-platform apps. :)</p>

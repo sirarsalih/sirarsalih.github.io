@@ -101,7 +101,7 @@ As you can see, ```DataContext="{Binding Source={StaticResource Locator}, Path=S
 </Grid>
 ```
 Build and run solution, the application will start:
-<a href="http://sirars.files.wordpress.com/2013/11/capture.png"><img class="alignnone size-medium wp-image-124" alt="Capture" src="http://sirars.files.wordpress.com/2013/11/capture.png?w=300" width="300" height="199" />
+<a href="https://sirars.files.wordpress.com/2013/11/capture.png"><img class="alignnone size-medium wp-image-124" alt="Capture" src="https://sirars.files.wordpress.com/2013/11/capture.png?w=300" width="300" height="199" />
     
 We have finished the sender part, what remains now is the receiver. Create a "ReceiverViewModel" class and add it to the ViewModel folder:
 
@@ -205,5 +205,5 @@ Title="MainWindow" Height="350" Width="525">
 </Window>
 ```
 Build and run solution, the final product:
-<p><a href="http://sirars.files.wordpress.com/2013/11/capture1.png"><img src="http://sirars.files.wordpress.com/2013/11/capture1.png?w=300" alt="Capture" width="300" height="200" class="alignnone size-medium wp-image-134" /></a></p>
+<p><a href="https://sirars.files.wordpress.com/2013/11/capture1.png"><img src="https://sirars.files.wordpress.com/2013/11/capture1.png?w=300" alt="Capture" width="300" height="200" class="alignnone size-medium wp-image-134" /></a></p>
 <p>That's pretty much it. In this simple guide, we have demonstrated the use of the MVVM design pattern in WPF, something which any WPF developer should be comfortable to work with. Enjoy!</p>

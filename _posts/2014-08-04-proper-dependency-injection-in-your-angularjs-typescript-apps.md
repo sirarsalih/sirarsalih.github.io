@@ -21,7 +21,7 @@ author:
   first_name: ''
   last_name: ''
 ---
-I've witnessed quite a lot of legacy AngularJS TypeScript code (<a href="http://sirarsalih.com/2014/01/28/when-two-forces-meet-angularjs-typescript/">yes, including my very own</a>) where dependency injection is done in an impractical way. The most common way of doing dependency injection, is by manually injecting the dependencies while loading your AngularJS components and their accommodating TypeScript classes. What this basically means is that, while injecting a dependency, you have to do this three times (!). Not only that, all three times have to be similar in order for the injection (string matching) to work. Consider the following example:
+I've witnessed quite a lot of legacy AngularJS TypeScript code (<a href="https://sirarsalih.com/2014/01/28/when-two-forces-meet-angularjs-typescript/">yes, including my very own</a>) where dependency injection is done in an impractical way. The most common way of doing dependency injection, is by manually injecting the dependencies while loading your AngularJS components and their accommodating TypeScript classes. What this basically means is that, while injecting a dependency, you have to do this three times (!). Not only that, all three times have to be similar in order for the injection (string matching) to work. Consider the following example:
 
 ```javascript
 angular.module("myApp", []).controller("MyController", ["$scope", "MyService", ($scope, MyService)

@@ -24,7 +24,7 @@ author:
 <p>Once Chocolatey is installed, you can install ScriptCS by typing in cmd:</p>
 <pre>cinst scriptcs</pre>
 <p>That's it! To use ScriptCS, fire up cmd and simply type <code>scriptcs</code>. Then you can start writing C# code:</p>
-<p><a href="http://sirars.files.wordpress.com/2013/12/capture.png"><img src="http://sirars.files.wordpress.com/2013/12/capture.png?w=300" alt="Capture" width="300" height="152" class="alignnone size-medium wp-image-180" /></a></p>
+<p><a href="https://sirars.files.wordpress.com/2013/12/capture.png"><img src="https://sirars.files.wordpress.com/2013/12/capture.png?w=300" alt="Capture" width="300" height="152" class="alignnone size-medium wp-image-180" /></a></p>
 Now, let's create something more interesting. Create a new script file called ```Person.csx```and save it in an empty folder. You can use any text editor you like, I prefer <a href="http://notepad-plus-plus.org/download/v6.5.2.html" title="Notepad++">Notepad++</a>. Write the following C# code in your script:
 
 ```csharp
@@ -50,7 +50,7 @@ class Person {
 ```
 
 <p>Note how the object is created outside the class, and printed out to console. Now fire up cmd and execute your script by typing <code>scriptcs Person.csx</code>:</p>
-<p><a href="http://sirars.files.wordpress.com/2013/12/capture2.png"><img src="http://sirars.files.wordpress.com/2013/12/capture2.png?w=300" alt="Capture2" width="300" height="152" class="alignnone size-medium wp-image-183" /></a></p>
+<p><a href="https://sirars.files.wordpress.com/2013/12/capture2.png"><img src="https://sirars.files.wordpress.com/2013/12/capture2.png?w=300" alt="Capture2" width="300" height="152" class="alignnone size-medium wp-image-183" /></a></p>
 <p>Isn't this cool? Imagine the possibilities. You can now write clean C# code in script form in any text editor you like, without binding yourself to a heavy IDE. Hope you enjoyed this tutorial, and good luck!</p>
 <p><strong>ScriptCS-GUI</strong></p>
 <p>It's also worth mentioning that I stumbled upon a toolkit for ScriptCS that allows you to create GUI forms, this is quite useful when you're writing Windows applications. ScriptCS-GUI is a pretty nice framework, I recommend checking out <a href="http://hemme.github.io/scriptcs-gui/" title="ScriptCS-GUI">their site here</a>.</p>

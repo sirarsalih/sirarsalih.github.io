@@ -20,4 +20,4 @@ author:
 ---
 <p>I'm thrilled to announce that I will be speaking at the <a href="http://trondheimdc.no/" target="_blank">Trondheim Developer Conference</a> in October this year! If you didn't know already, this is an awesome conference arranged once a year by technology user groups in the Trondheim area, Norway. Among the user groups behind the conference is the <a href="http://nnug.no/" target="_blank">Norwegian .NET User Group</a>, <a href="http://www.meetup.com/javaBin-Trondheim/" target="_blank">JavaBin Trondheim</a>, <a href="http://www.meetup.com/TrondheimXP/" target="_blank">Trondheim XP &amp; Agile Meetup</a> and many more! </p>
 <p>The conference kicks off on October 27th, and the topic of my talk is "TDD with AngularJS and TypeScript". Make sure to book your tickets today, and I will see you in October!</p>
-<p><a href="http://trondheimdc.no/" target="_blank"><img src="http://sirars.files.wordpress.com/2014/06/tdc.png" alt="tdc" /></a></p>
+<p><a href="http://trondheimdc.no/" target="_blank"><img src="https://sirars.files.wordpress.com/2014/06/tdc.png" alt="tdc" /></a></p>

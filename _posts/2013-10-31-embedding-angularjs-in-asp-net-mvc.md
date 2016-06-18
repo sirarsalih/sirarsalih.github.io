@@ -163,7 +163,7 @@ public class BundleConfig
 ```
 Make special note of <code>ng-controller</code> which binds your controller. Then, for instance, by using <code>ng-repeat</code> you can loop through your local students collection and easily access each student and their properties. That's pretty much it, go ahead and test out the code!
 ## Dependency Injection (unit testing)
-As I mentioned earlier, AngularJS was designed to be testable from bottom up. So I thought it would be useful to include an example of testing our student controller, showing how dependency injection is done. We are here using <code>angular-mocks</code> (which comes with AngularJS when you install it) to create our mocks, and [Jasmine](http://pivotal.github.io/jasmine/) for test syntax (check out [my blog post on unit testing JavaScript](http://sirars.com/2013/10/28/test-driving-your-javascript-visual-studio-jasmine-karma-test-runner/)):
+As I mentioned earlier, AngularJS was designed to be testable from bottom up. So I thought it would be useful to include an example of testing our student controller, showing how dependency injection is done. We are here using <code>angular-mocks</code> (which comes with AngularJS when you install it) to create our mocks, and [Jasmine](http://pivotal.github.io/jasmine/) for test syntax (check out [my blog post on unit testing JavaScript](https://sirarsalih.com/2013/10/28/test-driving-your-javascript-visual-studio-jasmine-karma-test-runner/)):
 
 ```javascript
 describe('Test the student controller', function() {
