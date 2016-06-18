@@ -27,6 +27,8 @@ author:
   # Setting social media usernames will add icons at the bottom of the sidebar
   twitter:        sirarsalih
   github:         sirarsalih
+  linkedin:       sirar-salih
+  rss:            atom.xml
 
   # Setting a disqus username will enable the comment section
   disqus:         sirarsalih

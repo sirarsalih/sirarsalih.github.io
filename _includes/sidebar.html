@@ -60,6 +60,14 @@
       {% if site.author.twitter %}
         {% include icon-twitter.html username=site.author.twitter %}
       {% endif %}
+      
+      {% if site.author.linkedin %}      
+        {% include icon-linkedin.html username=site.author.linkedin %}
+      {% endif %}
+      
+      {% if site.author.rss %}      
+        {% include icon-rss.html rss=site.author.rss %}
+      {% endif %}
     </div>
   </div>
 </aside>
