@@ -6,7 +6,6 @@ type: post
 published: true
 status: publish
 categories:
-- Development
 tags: [js]
 meta:
   _wpas_skip_facebook: '1'

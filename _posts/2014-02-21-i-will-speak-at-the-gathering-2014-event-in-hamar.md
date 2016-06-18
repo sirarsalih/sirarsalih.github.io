@@ -5,7 +5,7 @@ date: 2014-02-21 16:40:32.000000000 +01:00
 type: post
 published: true
 status: publish
-categories: []
+categories:
 tags: [misc]
 meta:
   _edit_last: '54045106'

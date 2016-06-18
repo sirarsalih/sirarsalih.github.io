@@ -6,7 +6,6 @@ type: post
 published: true
 status: publish
 categories:
-- Unit Testing
 tags: [js]
 meta:
   _edit_last: '54045106'

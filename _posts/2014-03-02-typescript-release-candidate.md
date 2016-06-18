@@ -6,7 +6,6 @@ type: post
 published: true
 status: publish
 categories:
-- Development
 tags: [js]
 meta:
   _edit_last: '54045106'
