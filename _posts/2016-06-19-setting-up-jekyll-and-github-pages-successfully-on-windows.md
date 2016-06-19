@@ -66,7 +66,7 @@ So here comes a step-by-step guide that I worked out, and which I got working on
 	
 	 ```bundle install```
 	 
-	Jekyll and GitHub Pages are now fully installed in your system. To create a new Jekyll template site, run from cmd:
+	Jekyll and GitHub Pages are now fully installed on your system. To create a new Jekyll template site, run from cmd:
 	
 	```bundle exec jekyll new . --force```
 	
