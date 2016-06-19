@@ -8,7 +8,7 @@ Right, so, this is a tricky one. I've read around the web that quite a handful o
 
 So here comes a step-by-step guide that I worked out, and which I got working on all of my Windows 10 machines. Enjoy!
 
-1. The end goal is here setting up a blog on the web, so you'll need a site to host your blog. [GitHub Pages](https://pages.github.com/) is a great alternative. Go ahead and go through [the steps](https://pages.github.com/) outlined by GitHub.
+1. The end goal here is setting up a blog on the web, so you'll need a site to host your blog. [GitHub Pages](https://pages.github.com/) is a great alternative. Go ahead and go through [the steps](https://pages.github.com/) outlined by GitHub.
 2. Install [Chocolatey](https://chocolatey.org/install).
 3. Install Ruby by starting cmd and:
 
