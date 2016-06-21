@@ -27,6 +27,13 @@ js:
    description: >
      A JavaScript related post.
      
+html-css:
+   name: HTML/CSS
+   image: /public/img/realistnap.jpg
+   color: '#949667'
+   description: >
+     An HTML/CSS related post.
+     
 dotnet:
    name: .NET
    image: /public/img/realistnap.jpg
