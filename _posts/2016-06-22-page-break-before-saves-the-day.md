@@ -19,10 +19,12 @@ page-break-after
 page-break-inside
 ```
 
-In my case I was interested in [page-break-before](http://www.w3schools.com/cssref/pr_print_pagebb.asp), as I wanted to break the page just before displaying the content. Setting page-break-before to always will do just that. Here is an example of usage:
+In my case I was interested in [page-break-before](http://www.w3schools.com/cssref/pr_print_pagebb.asp), as I wanted to break the page just before displaying the content. Setting page-break-before to always will do just that. Here is an example usage:
 
 ```html
 <div style="page-break-before: always;">
 <!---content--->
 </div>
 ```
+
+You'd want to put this in a LESS/CSS class so you can use it more generally in your solution.
