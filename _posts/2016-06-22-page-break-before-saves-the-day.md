@@ -11,7 +11,7 @@ It seemed there was an easier way to do this.
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">page-break-before: always; pretty much just saved my butt cc: <a href="https://twitter.com/tomasekeli">@tomasekeli</a></p>&mdash; Sirar Salih (@sirarsalih) <a href="https://twitter.com/sirarsalih/status/740496400140636160">June 8, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Amazingly enough, from the HTML itself you can define which parts you want on a new page. HTML is capable of determining a page break, and you can do this in different orders. Say hello to:
+Amazingly enough, from the HTML itself you can define which parts you want on a new printed page. HTML is capable of determining a page break, and you can do this in different orders. Say hello to:
 
 ```
 page-break-before
