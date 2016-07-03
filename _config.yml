@@ -38,10 +38,8 @@ author:
 
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:          |
-    Hi, I'm Sirar! I'm a passionate web developer, I like writing code and playing football.
-    
-    Looking for my old blog? It can be found [here](https://sirars.wordpress.com/).
-    
+    Hi, I'm Sirar! I'm a passionate web developer, I like writing code and playing football.    
+     
     Blog theme is [Hydejack](http://qwtel.com/hydejack/) built with [Jekyll](https://jekyllrb.com/).
 
 kramdown:
