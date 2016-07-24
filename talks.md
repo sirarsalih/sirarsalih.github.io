@@ -17,6 +17,8 @@ title: Talks
 
 [**AngularJS Oslo 2014**, Test Driving AngularJS](https://vimeo.com/109831868)
 
+[**Abakus NTNU 2014**, Internet of Things Rise of the Drones](https://abakus.no/event/1405-itera-internet-of-things-rise-of-the-drones/)
+
 [**JavaZone 2014**, TDD with AngularJS and TypeScript](http://2014.javazone.no/presentation.html?id=e72daf93)
 
 [**NDC Oslo 2014**, TDD with AngularJS and TypeScript workshop](http://ndcoslo.com/)
