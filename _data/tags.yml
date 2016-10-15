@@ -20,6 +20,13 @@ misc:
    description: >
      A miscellaneous post.     
 
+tech:
+   name: Tech
+   image: /public/img/realistnap.jpg
+   color: '#949667'
+   description: >
+     A tech related post.
+
 js:
    name: JavaScript
    image: /public/img/realistnap.jpg
