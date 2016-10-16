@@ -42,7 +42,7 @@ git revert -m 1 <commit-hash>
 git commit -m "Reverting the merge commit."
 ```
 
-That should do the trick in theory. Except it didn't for me. I ended in a strange state. I look at the clock and it's 07:00 PM. We have business people who would be doing verification of version X at around 09:30, I feel a bit of pressure rising and start thinking of the worst case scenarios. What happens if version X is not released? If I'm unable to release this, then the main system would have to postpone their release otherwise there is a high chance that our existing version in production will not work after the main system's version X release. This is a case where rolling forward is the only vaiable option.
+That should do the trick in theory. Except it didn't for me. I ended in a strange state. I look at the tray and it's 07:00 PM. We have business people waiting to do verification of version X later that night, I feel a bit of pressure rising and start thinking of the worst case scenarios. What happens if version X is not released? If I'm unable to release this, then the main system would have to postpone their release otherwise there is a high chance that our existing version in production will not work after the main system's version X release. This is a case where rolling forward is the only vaiable option.
 
 ## Time flies
 
@@ -52,6 +52,24 @@ An idea pops to my head.
 
 ## The turning point
 
-The remote master branch is messed up, but the release branch is working. Why not just use the release branch? What is the probability that the current master and the release branches are different?
+The remote master branch is messed up, but the release branch is working. Why not just use the release branch? What is the probability that the current master differs from the release branch? If we had delivered something to production (updated the master) prior to the release, that delivery would be in the release branch. The release branch was created initially from the develop branch. The math holds. The time on the tray shows 09:00 PM. I start prepping up the component using the release branch. While doing this, I make a phone call. I called the person in charge of coordinating the release of all systems that night. I felt the need to talk to someone. I told the person, that things were not looking good for our team but I had a way to solve it. The person told me that unexpected things like this happen and it's really out of our control, so I shouldn't worry too much. He told me that if I felt the solution would work, I should go for it. I prepped up the release package of the component and informed the infrastructure team.
+
+In the next 20 minutes, I prepped up the rest of the components. Everything was scheduled for release starting at 10:15 PM.
 
 ## It's not over yet
+
+I grab my jacket and start heading home. Just as I leave the building and head for the bus stop, I remember something. I remember that there is a certain component that I scheduled, that needs to be released in a specific order. That component is migrating data into the database, and of course this has to be done after the database has been created. The database creation happens in the component that would be released manually by the infrastructure team! I need to pass this info. to them, otherwise version X will not work in production after the release. I decide to fix this problem via VPN from home. 
+
+I arrive home at around 11:00 PM. I start up my computer and log into VPN. I had scheduled the deploy of the database migration 40 minutes prior. The infrastructure team hadn't yet deployed the component and thus the migration failed. They're still quite busy with other things. My eyes start to shut. I ponder for a moment how long it will take the guys to deploy the component. I decide to schedule the database migration to start at 04:30 AM. That will give them enough time.
+
+I go to bed.
+
+## The happy ending
+
+I wake up at 08:00 AM the following morning. I check my e-mail on my phone and see a lot of activities, it seems that the infrastructure team had finished at around 03:00 AM. I was off by one hour and 30 minutes. This means that from 04:30 AM version X was fully operating in production. We had some downtime, but I considered the whole thing a success given the circumstances.
+
+## The takeaway
+
+I surely learned a lot from this experience. First and foremost, no one person should be left alone in such a situation. It's always good to have someone beside you during a release, both to boost morale and to help give ideas on solving potential problems. Second, during each release, we iterate and improve the process. I believe the decision to use the release branch was good, perhaps that will be the way moving forward. We eliminate the need of merging release with master, instead using release itself for production and simply switching the branches each release.
+
+Regardless, that Friday will stick with me forever.
