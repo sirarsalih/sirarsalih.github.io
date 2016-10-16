@@ -53,3 +53,5 @@ An idea pops to my head.
 ## The turning point
 
 The remote master branch is messed up, but the release branch is working. Why not just use the release branch? What is the probability that the current master and the release branches are different?
+
+## It's not over yet
