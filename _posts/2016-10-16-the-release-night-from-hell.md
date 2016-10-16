@@ -18,10 +18,12 @@ There were two sets of conflicts; all the packages.config and csproj files. For 
 I cleaned the solution, rebuilt and completed the package restore. Compilation errors. It must be the NuGet packages, I thought. There must've been a delay and the package versions weren't updated properly in the config files. I checked the versions that were in the package server, indeed, there were four module dependencies that had outdated package versions. They needed to update to version X. This is a known problem that we sometimes experience. For some reason, our script that updates the packages in the feed doesn't see a code change and therefore doesn't trigger. The script checks for code changes that have happened during the last hour. I upped this value a couple of times. It wasn't after I upped the value to four weeks that the packages got updated (I have no idea why). Great, it's 03:45 PM and I'm on track. I did another restore of the packages and compiled the solution. Visual Studio tells me that it could not build the project dlls. No compilation error, just that dlls are missing. Interesting, never seen this during our release before. 
 
 [<img src="{{ site.url }}/public/img/flight_1.jpg">]({{ site.url }}/public/img/flight_1.jpg)
+*A scene from the 2012 movie, Flight. Wish I had a first officer.*
 
 Dlls are missing. No compilation error. The words repeat themselves in my head. How is this possible? There must be some reference issues somewhere, but how? We never get this problem. No, it just can't be. I refuse to accept this error. It must be local, I'm pushing this. The build server will be green. The dice is cast. Let it go down in history, that at this point in time, I could've done many other things. Best case I could've tried to revert the commits, worst case I could've just deleted my local master branch and started the merge all over again. But keep in mind, at this point it's 04:15 PM this Friday and I'm not even halfway through finishing the release. I really just wanted to finish this component and finalize the release and leave the office by 05:00 PM. Was it reckless of me to push the code? Yes. The build server failed and it failed magnificently. Compilation errors all over the place, nothing builds. Now, I knew that I wasn't going home by 05:00 PM.
 
 [<img src="{{ site.url }}/public/img/flight_2.jpg">]({{ site.url }}/public/img/flight_2.jpg)
+*A scene from the 2012 movie, Flight.*
 
 I was supposed to prepare this component for release and inform the infrastructure team, so that they could manually start the deployment after the server change had been made. I went over to the team and told them that I would be in the office for a while. We chuckled a little bit.
 
@@ -34,6 +36,7 @@ That should do the trick. Not really...
 One of the commits was a merge commit, and this doesn't work for merge commits. I needed to run this for the last three commits, then run something else for the merge commit. 
 
 [<img src="{{ site.url }}/public/img/flight_3.jpg">]({{ site.url }}/public/img/flight_3.jpg)
+*A scene from the 2012 movie, Flight.*
 
 At this point, it occurred to me that I should probably create a backup branch of master and play around with that one until I find a solution. There is no need to pour fuel into the fire. So I created a master/backup branch and started experimenting.
 
@@ -51,6 +54,7 @@ git commit -m "Reverting the merge commit."
 That should do the trick in theory. Except it didn't for me. I ended up in a strange state. I look at the tray and it's 07:00 PM. We have business people waiting to do verification of version X later that night, I feel a bit of pressure rising and start thinking of the worst case scenarios. What happens if version X is not released? 
 
 [<img src="{{ site.url }}/public/img/flight_4.jpg">]({{ site.url }}/public/img/flight_4.jpg)
+*A scene from the 2012 movie, Flight.*
 
 If I'm unable to release this, then the main system would have to postpone their release otherwise there is a high chance that our existing version in production will not work after the main system has released its version X. This is a case where rolling forward is the only vaiable option.
 
@@ -61,22 +65,26 @@ An idea pops into my head.
 The remote master branch is messed up, but the release branch is working. Why not just use the release branch? What is the probability that the current master differs from the release branch? If we had delivered something to production (updated the master) prior to the release, that delivery would be in the release branch. The release branch was created initially from the develop branch. The math holds. The time on the tray shows 09:00 PM. I start prepping up the component using the release branch.
 
 [<img src="{{ site.url }}/public/img/flight_5.jpg">]({{ site.url }}/public/img/flight_5.jpg)
+*A scene from the 2012 movie, Flight.*
 
 While doing this, I make a phone call. I called the person in charge of coordinating the release of all systems that night. I felt the need to talk to someone. I told the person, that things were not looking good for our team but I had a way to solve it. The person told me that unexpected things like this happen sometimes and it's really not in our control, so I shouldn't worry too much. He told me that if I felt that my solution would work, I should go for it. I used the release branch, prepped up the release package of the component and informed the infrastructure team.
 
 [<img src="{{ site.url }}/public/img/flight_6.jpg">]({{ site.url }}/public/img/flight_6.jpg)
+*A scene from the 2012 movie, Flight.*
 
 During the next 20 minutes, I prepped up the rest of the components. Everything was scheduled for release starting at 10:15 PM.
 
 I grabbed my jacket and started heading home. Just as I left the building and headed for the bus stop, I remembered something. I remembered that there was a certain component that I scheduled, that needed to be released in a specific order. Usually we simply automated the order. The component migrates data into the database, and of course that had to be done after the database had been created. The database creation happens in the component that would be released manually by the infrastructure team! I needed to pass this info. to them, otherwise version X would not work in production after the release. I decided to fix this problem via VPN from home. 
 
 [<img src="{{ site.url }}/public/img/flight_7.jpg">]({{ site.url }}/public/img/flight_7.jpg)
+*A scene from the 2012 movie, Flight.*
 
 I arrived home at around 11:00 PM. I started up my computer and logged into my work computer at the office through VPN. I had scheduled the deploy of the database migration 40 minutes prior. The infrastructure team hadn't yet deployed the database creation component and thus the migration failed. They're still quite busy with other things. My eyes started to shut. I pondered for a moment how long it would take the guys to deploy the component. I finally decided to schedule the database migration to start at 04:30 AM. That would give them enough time.
 
 08:00 AM the following morning. I checked my e-mail on my phone and saw a lot of activities, it seemed that the infrastructure team had finished at around 02:00 AM. I was off by two hours and 30 minutes. This meant that from 04:30 AM version X was fully working in production. We had some downtime, but I considered the whole thing a success given the circumstances...
 
 [<img src="{{ site.url }}/public/img/flight_8.jpg">]({{ site.url }}/public/img/flight_8.jpg)
+*A scene from the 2012 movie, Flight.*
 
 ## The takeaway
 
