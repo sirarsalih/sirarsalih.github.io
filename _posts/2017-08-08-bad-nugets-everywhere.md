@@ -3,9 +3,9 @@ layout: post
 title: Bad NuGets everywhere
 tags: [dotnet, tech]
 ---
-It's quite ridiculous how easy it is to create a "bad NuGet package" and distribute it through a package repository, by bad meaning a package which damages the system in one way or another. Granted the [NuGet Gallery](https://www.nuget.org/) scans a given package for viruses and bad intent prior to making the package public, so there are indeed checks there. However, if you have set up a custom NuGet Gallery for your project you could essentially upload packages that are bad. I thought that I would demonstrate how to create a bad NuGet package.
+It's quite funny how easy it is to create a "bad NuGet package" and distribute it through a package repository, by bad meaning a package which damages the system in one way or another. Granted the [NuGet Gallery](https://www.nuget.org/) scans a given package for viruses and bad intent prior to making the package public, however, if you have set up a custom NuGet Gallery for your project you could essentially upload packages that are bad.
 
-In the following steps, we will create an HTML sanitizer package that cleans HTML code in addition to killing a process at random. The package which we will create uses [HTMLTidy](https://github.com/markbeaton/TidyManaged) under the roof, so that to the user it will look like HTML code is being cleaned as it should.
+To demonstrate this, in the following steps, we will create an HTML sanitizer package that cleans HTML code in addition to killing a process at random. The package which we will create uses [HTMLTidy](https://github.com/markbeaton/TidyManaged) under the roof, so that to the user it will look like HTML code is being cleaned as it should.
 
 We create a static <code>Sanitizer</code> class with one public method <code>SanitizeHtml</code>:
 
@@ -17,7 +17,7 @@ public static string SanitizeHtml(string input)
 }
 ```
 
-This method kills a process at random, then proceeds to clean the HTML input. Killing a process at random is straightforward; fetch all process IDs into a list, then randomly fetch a process by ID from the IDs list. Proceed to kill that process:
+This method kills a process at random, then proceeds to clean the HTML input. Killing a process at random is straightforward; fetch all process IDs into a list, then randomly fetch a process by ID from the IDs list. Then proceed to kill that process:
 
 ```csharp
 private static void KillRandomProcess()
@@ -38,11 +38,11 @@ private static void KillRandomProcess()
 }
 ```
 
-The reason that we use a try-catch (and call the method again inside the catch) is that sometimes we don't have access to kill a given process:
+The reason that we use a try-catch (and call the method again inside the catch) is that sometimes we are denied access to kill a given process:
 
 [<img src="{{ site.url }}/public/img/access_is_denied.png">]({{ site.url }}/public/img/access_is_denied.png)
 
-Sanitizing the HTML input is done using HTMLTidy:
+Sanitizing the HTML input is done using [HTMLTidy](https://github.com/markbeaton/TidyManaged):
 
 ```csharp
 private static string SanitizeUsingHtmlTidy(string input)
