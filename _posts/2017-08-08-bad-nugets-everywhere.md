@@ -89,7 +89,7 @@ Take a look at the number of processes currently running using PowerShell and yo
 And voilà, we installed a bad NuGet package locally in our system.
 
 <h2>SafeNuGet does not detect our package as vulnerable</h2>
-After installing [SafeNuGet](https://www.nuget.org/packages/SafeNuGet/) (an MsBuild task that warns about insecure NuGet libraries) by [eoftedal](https://www.nuget.org/profiles/eoftedal) and building the solution, no vulnerable package was found.
+After installing [SafeNuGet](https://www.nuget.org/packages/SafeNuGet/) (an MsBuild task that warns about insecure NuGet libraries) by [eoftedal](https://www.nuget.org/profiles/eoftedal) and building the solution, no vulnerable package was found. Scary indeed.
 
 [<img src="{{ site.url }}/public/img/no_vulnerable_package_found.png">]({{ site.url }}/public/img/no_vulnerable_package_found.png)
 
