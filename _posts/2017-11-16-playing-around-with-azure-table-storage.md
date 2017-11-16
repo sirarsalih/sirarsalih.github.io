@@ -83,6 +83,6 @@ var deleteOperation = TableOperation.Delete(deleteEntity);
 await _cloudTable.ExecuteAsync(deleteOperation);
 ```
 
-Those are the basic operations which help you get up and running with Azure table storage. For more information, you can always check out the [official Microsoft documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/table-storage-how-to-use-dotnet).
+Those are the basic operations which help you get up and running with Azure table storage. In addition, I recommend downloading [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) which is a tool to help you manage your tables. For more information on table storage, you can always check out the [official Microsoft documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/table-storage-how-to-use-dotnet).
 
 Hope you enjoyed this!
