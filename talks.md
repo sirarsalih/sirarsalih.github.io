@@ -25,6 +25,6 @@ title: Talks
 
 [**HTML5 DevConf 2014**, TDD with AngularJS and TypeScript](https://www.youtube.com/watch?v=1_7OUwvHsPI)
 
-[**The Gathering 2014**, Genetic algoritm solving TSP workshop](http://www.gathering.org/tg14/live/#!/schedule)
+[**The Gathering 2014**, Genetic algorithm solving TSP workshop](http://www.gathering.org/tg14/live/#!/schedule)
 
 [**NNUG Oslo 2013**, Angularfying your ASP.NET MVC app](http://www.meetup.com/NNUGOslo/events/146021102/)
