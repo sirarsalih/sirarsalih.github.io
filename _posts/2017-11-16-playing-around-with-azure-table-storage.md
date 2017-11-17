@@ -20,7 +20,25 @@ public TableStorageService(KeyVaultSecretProvider keyVaultSecretProvider, string
 }
 ```
 
-Here we're defining a table called <code>Customers</code>. The next step is to create this table if it does not exist:
+Here is how the installer - using [Castle Windsor](http://www.castleproject.org/) - looks like, that wires up the dependencies for <code>TableStorageService</code>:
+
+```csharp
+public class Installer : IWindsorInstaller
+{
+    public void Install(IWindsorContainer container, IConfigurationStore store)
+    {
+        container.Install(new AzureClientInstaller(new AzureClientOptions { SpnIdentifier = "Api", UseCacheForSecrects = true, SpnCertificateLocation = StoreLocation.LocalMachine }));
+        container.Register(Classes.FromAssembly(GetType().Assembly).BasedOn<ApiController>()
+            .LifestylePerWebRequest().UseTimedOperationInterceptor<ApiController>(container).UseAsyncAuthorizationInterceptor());
+
+        container.Register(Component.For<ITableStorageService>().ImplementedBy<TableStorageService>().LifestyleSingleton()
+            .DependsOn(Dependency.OnValue("storageAccountName", ConfigurationManager.AppSettings["MyBusiness.Storage.AccountName"]))
+            .DependsOn(Dependency.OnValue("storageAccountKeyName", ConfigurationManager.AppSettings["MyBusiness.Storage.AccountKeyName"])));
+    }
+}
+```
+
+In the code we're defining a table called <code>Customers</code>. The next step is to create this table if it does not exist:
 
 ```csharp
 _cloudTable.CreateIfNotExists();
