@@ -20,7 +20,7 @@ public TableStorageService(KeyVaultSecretProvider keyVaultSecretProvider, string
 }
 ```
 
-Here is how the installer - using [Castle Windsor](http://www.castleproject.org/) - looks like, that wires up the dependencies for <code>TableStorageService</code>:
+Here is how the IoC installer - using [Castle Windsor](http://www.castleproject.org/) - looks like, that wires up the dependencies for <code>TableStorageService</code>:
 
 ```csharp
 public class Installer : IWindsorInstaller
@@ -32,8 +32,8 @@ public class Installer : IWindsorInstaller
             .LifestylePerWebRequest().UseTimedOperationInterceptor<ApiController>(container).UseAsyncAuthorizationInterceptor());
 
         container.Register(Component.For<ITableStorageService>().ImplementedBy<TableStorageService>().LifestyleSingleton()
-            .DependsOn(Dependency.OnValue("storageAccountName", ConfigurationManager.AppSettings["MyBusiness.Storage.AccountName"]))
-            .DependsOn(Dependency.OnValue("storageAccountKeyName", ConfigurationManager.AppSettings["MyBusiness.Storage.AccountKeyName"])));
+            .DependsOn(Dependency.OnValue("storageAccountName", ConfigurationManager.AppSettings["Storage.AccountName"]))
+            .DependsOn(Dependency.OnValue("storageAccountKeyName", ConfigurationManager.AppSettings["Storage.AccountKeyName"])));
     }
 }
 ```
