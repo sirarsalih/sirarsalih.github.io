@@ -38,7 +38,7 @@ public class Installer : IWindsorInstaller
 }
 ```
 
-In the code we're defining a table called <code>Customers</code>. The next step is to create this table if it does not exist:
+In <code>TableStorageService</code> we're defining a table called <code>Customers</code>. The next step is to create this table if it does not exist:
 
 ```csharp
 _cloudTable.CreateIfNotExists();
