@@ -48,3 +48,10 @@ dotnet:
    description: >
      A .NET related post.     
 
+azure:
+   name: Azure
+   image: /public/img/realistnap.jpg
+   color: '#949667'
+   description: >
+     An Azure related post.   
+

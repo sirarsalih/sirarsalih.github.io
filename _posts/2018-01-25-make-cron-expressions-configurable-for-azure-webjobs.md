@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Make cron expressions configurable for Azure WebJobs
-tags: [dotnet, tech]
+tags: [dotnet, azure, tech]
 ---
 [Azure WebJobs](https://docs.microsoft.com/en-us/azure/app-service/web-sites-create-web-jobs) are great for running background tasks in the cloud. You can schedule a WebJob to execute different functions, such as updating a database, fetching data from an API, polling a service, etc. A WebJob will typically call a scheduled job to execute a function. The scheduling is done with a <code>TimerTrigger</code> that takes in a cron expression string as an argument:
 

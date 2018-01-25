@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Playing around with Azure Table Storage
-tags: [dotnet, tech]
+tags: [dotnet, azure, tech]
 ---
 I've been using [Azure table storage](https://azure.microsoft.com/en-us/services/storage/tables/) lately at work and I thought that I'd share my experiences with you, both good and bad. What I like about it is its ease of use and set up, requiring you to do minimal work to get it up and working in your solution. It does its job and it does it well, although it loses some of its charm when it comes down to performance and its lack of basic database operations such as "like" or "contains". If you want those operations, you'd need to implement them yourself using what's available.
 
