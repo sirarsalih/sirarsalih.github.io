@@ -17,7 +17,7 @@ author:
   first_name: ''
   last_name: ''
 ---
-<blockquote><em>Once a developer becomes comfortable with WPF and MVVM, it can be difficult to differentiate the two. - Josh Smith</em></p></blockquote>
+<blockquote><em>Once a developer becomes comfortable with WPF and MVVM, it can be difficult to differentiate the two. - Josh Smith</em></blockquote>
 <p>I couldn't agree more with Smith. I actually take it to the extreme and say that if you are working with WPF today without the MVVM design pattern, then you are definitely doing it wrong. Code-behind is the enemy, isolating your components through MVVM increases testability, maintainability and readability of your code. These are all essential in the clean code paradigm, so it would be illogical <em>not</em> to apply MVVM to your WPF code.</p>
 <p>In the following guide I explain how you can build a simple Hello World WPF MVVM application. There are <a title="MVVM toolkits" href="http://en.wikipedia.org/wiki/Model_View_ViewModel#Microsoft_.NET_open_source_MVVM_frameworks">many MVVM toolkits</a> out there, I prefer Laurent Bugnion's <a title="MVVM Light Toolkit" href="http://www.galasoft.ch/mvvm/">MVVM Light Toolkit</a> for its light weight capabilities.</p>
 <p><strong>Creating a Hello World WPF MVVM Application</strong></p>
