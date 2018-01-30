@@ -36,6 +36,22 @@ public class CertificateService : ICertificateService
 
 We first fetch all the local machine certificates, then we loop through them and fetch the certificate that we're looking for using the <code>friendly name</code>.
 
+Where can you find the <code>friendly name</code> of the certificate you may ask, it's pretty easy, click on <b>Start</b> on Windows then type <b>Run</b> and click on that:
+
+[<img src="{{ site.url }}/public/img/run_1.png">]({{ site.url }}/public/img/run_1.png)
+
+Type <b>certmgr.msc</b> and click on OK:
+
+[<img src="{{ site.url }}/public/img/run_2.png">]({{ site.url }}/public/img/run_2.png)
+
+Under <b>Certificates</b> depending on where the certificate was installed, whether it was installed under Personal or Trusted Root Certification Authorities for example, expand the correct category and click on <b>Certificates</b>. Now find the certificate in the list, right click it and choose <b>Properties</b>:
+
+[<img src="{{ site.url }}/public/img/certmgr_1.png">]({{ site.url }}/public/img/certmgr_1.png)
+
+You'll find the <code>friendly name</code> under <b>General</b>:
+
+[<img src="{{ site.url }}/public/img/certmgr_2.png">]({{ site.url }}/public/img/certmgr_2.png)
+
 If you're lucky enough and get to work with WCF (pun intended), and would like to fetch the certificate through WCF, you can encapsulate the certificate as a property of a response object:
 
 ```csharp
