@@ -67,7 +67,7 @@ public class CertificateResponse
 ]
 ```
 
-Then you'd need to change the method that fetches the certificate to return the response object:
+Then you'd need to change the method that fetches the certificate to return the response object instead:
 
 ```csharp
 public CertificateResponse GetCertificateFromLocalMachineStore(string friendlyName)
