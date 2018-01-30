@@ -5,7 +5,7 @@ tags: [dotnet, tech]
 ---
 Nowadays we do things in Azure but this is quite a relevant scenario in the world of .NET security, where we sometimes need to fetch a certificate programmatically in order to validate it to some given condition(s). There is quite an amount of boiler plate code in order to achieve this, so let's jump right into it. 
 
-A certificate is fetched using a public <code>friendly name</code>, let's assume that we use a <code>CertificateService</code> to fetch the certificate, then the service would look like this:
+A certificate is fetched using a public friendly name, let's assume that we use a <code>CertificateService</code> to fetch the certificate, then the service would look like this:
 
 ```csharp
 using System.Linq;
@@ -34,9 +34,9 @@ public class CertificateService : ICertificateService
 }
 ```
 
-We first fetch all the local machine certificates, then we loop through them and fetch the certificate that we're looking for using the <code>friendly name</code>.
+We first fetch all the local machine certificates, then we loop through them and fetch the certificate that we're looking for using the friendly name.
 
-But where can you find the <code>friendly name</code> of the certificate you may ask. It's pretty straightforward, click on <b>Start</b> on Windows then type <b>Run</b> and click on it:
+But where can you find the friendly name of the certificate you may ask. It's pretty straightforward, click on <b>Start</b> on Windows then type <b>Run</b> and click on it:
 
 [<img src="{{ site.url }}/public/img/run_1.png">]({{ site.url }}/public/img/run_1.png)
 
@@ -44,11 +44,11 @@ Type <b>certmgr.msc</b> and click on OK:
 
 [<img src="{{ site.url }}/public/img/run_2.png">]({{ site.url }}/public/img/run_2.png)
 
-Under <b>Certificates</b> depending on where the certificate was installed, whether it was installed under Personal or Trusted Root Certification Authorities for example, expand the correct category accordingly and click on <b>Certificates</b>. Now find the certificate in the list, right click it and choose <b>Properties</b>:
+Under <b>Certificates</b> depending on where the certificate was installed, whether it was installed under <b>Personal</b> or <b>Trusted Root Certification Authorities</b> for example, expand the correct category accordingly and click on <b>Certificates</b>. Now find the certificate in the list, right click it and choose <b>Properties</b>:
 
 [<img src="{{ site.url }}/public/img/certmgr_1.png">]({{ site.url }}/public/img/certmgr_1.png)
 
-You'll find the <code>friendly name</code> under <b>General</b>:
+You'll find the friendly name under <b>General</b>:
 
 [<img src="{{ site.url }}/public/img/certmgr_2.png">]({{ site.url }}/public/img/certmgr_2.png)
 
