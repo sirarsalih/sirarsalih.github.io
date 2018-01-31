@@ -12,7 +12,7 @@ I'm very excited to announce that I will be joining [Making Waves](https://www.m
 [<img src="{{ site.url }}/public/img/mw_party.png">]({{ site.url }}/public/img/mw_party.png)
 *Making Waves new year's party 2018.*
 
-[Making Waves](https://www.makingwaves.com/) takes great pride in what it delivers and [has many customers](https://www.makingwaves.com/our-work/). I've always had my eyes at this company, really. This goes back to one of the very first meetups I helped arrange at the [AngularJS Oslo user group in 2014](https://www.meetup.com/AngularJS-Oslo/events/163563622/), where we hosted it at the old [Making Waves](https://www.makingwaves.com/) office in Oslo. That was a glorious day! 
+[Making Waves](https://www.makingwaves.com/) takes great pride in what it delivers and [has many customers](https://www.makingwaves.com/our-work/). I've always had my eyes set at this company, really. This goes back to one of the very first meetups I helped arrange at the [AngularJS Oslo user group in 2014](https://www.meetup.com/AngularJS-Oslo/events/163563622/), where we hosted it at the old [Making Waves](https://www.makingwaves.com/) office in Oslo. That was a glorious day! 
 
 Some of the things that especially set this company apart from other consultancies, is that it has a strong focus on design and user experience, works to send teams rather than individuals to the customer site (or has teams working in-house) and a fair salary model where employees are economically appreciated equally. All are important traits.
 
