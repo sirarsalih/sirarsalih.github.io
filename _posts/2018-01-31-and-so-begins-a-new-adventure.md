@@ -1,0 +1,8 @@
+---
+layout: post
+title: And So Begins a New Adventure
+tags: [misc]
+---
+I'm very excited to announce that I will be joining [Making Waves](https://www.makingwaves.com/) in February. It has long been a dream of mine to take on more responsibility at my work and become an architect. And so when I was approached last year with an offer as a solution architect at [Making Waves](https://www.makingwaves.com/), I knew that was it for me. Not only that, but the fact that [Making Waves](https://www.makingwaves.com/) puts in a major effort - to say the least - in creating the best possible customer journey, won me over. I'm very passionate about what I do and this company values that; they are a group of over 500 passionate developers, designers and strategists with offices across Oslo, Stockholm, Krakow, Chicago and New York. On top of that, this is a company with a goal to *create the most fantastic place to work at*, placing the employee needs first. [Making Waves](https://www.makingwaves.com/) takes great pride in what it delivers and has many customers (check it out [here](https://www.makingwaves.com/our-work/)).
+
+I've always had my eyes at [Making Waves](https://www.makingwaves.com/), really. This goes back to one of the very first meetups I helped arrange at the AngularJS Oslo user group, where we used hosted it at the old [Making Waves](https://www.makingwaves.com/) office in Oslo.
