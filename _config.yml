@@ -38,11 +38,11 @@ author:
 
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:          |
-    Hi, I'm Sirar! I'm a passionate web developer, I like writing code and talking.    
+    Hi, I'm Sirar! I'm a passionate web developer, I like writing code and talking about it.    
      
-    By day I'm a Technical Lead and System Developer [@Ifforsikring](https://twitter.com/Ifforsikring). By night I'm the creator of [node-server-ar-drone](https://www.npmjs.com/package/node-server-ar-drone).
+    By day I'm a Solution Architect [@making_waves](https://twitter.com/making_waves). By night I'm the creator of [node-server-ar-drone](https://www.npmjs.com/package/node-server-ar-drone).
      
-    Blog theme is [Hydejack](http://qwtel.com/hydejack/) built with [Jekyll](https://jekyllrb.com/), blog's code can be found [here](https://github.com/sirarsalih/sirarsalih.github.io).
+    Blog theme is [Hydejack](http://qwtel.com/hydejack/) built with [Jekyll](https://jekyllrb.com/) and hosted at GitHub, blog's code can be found [here](https://github.com/sirarsalih/sirarsalih.github.io).
 
 kramdown:
   math_engine: mathjax
