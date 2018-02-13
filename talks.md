@@ -7,6 +7,8 @@ title: Talks
   ![{{ site.author.name }}]({{ site.author.photo }}){:.me}
 {% endif %}
 
+[**SATURN 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://resources.sei.cmu.edu/news-events/events/saturn/)
+
 [**JavaZone 2016**, Let's overengineer the hell out of this](https://2016.javazone.no/program/lets-overengineer-the-hell-out-of-this)
 
 [**AngularJS Oslo 2015**, Angular 2 + TypeScript = true. Let's Play!](https://vimeo.com/139748385)
