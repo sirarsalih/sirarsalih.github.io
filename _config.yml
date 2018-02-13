@@ -42,7 +42,7 @@ author:
      
     By day I'm a Solution Architect [@making_waves](https://twitter.com/making_waves). By night I'm the creator of [node-server-ar-drone](https://www.npmjs.com/package/node-server-ar-drone).
      
-    Blog theme is [Hydejack](http://qwtel.com/hydejack/) built with [Jekyll](https://jekyllrb.com/) and hosted at GitHub, blog's code can be found [here](https://github.com/sirarsalih/sirarsalih.github.io).
+    Blog theme is [Hydejack](http://qwtel.com/hydejack/) built with [Jekyll](https://jekyllrb.com/) and [hosted at GitHub](https://github.com/sirarsalih/sirarsalih.github.io).
 
 kramdown:
   math_engine: mathjax
