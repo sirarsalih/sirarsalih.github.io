@@ -7,4 +7,4 @@ title: Clients
   ![{{ site.author.name }}]({{ site.author.photo }}){:.me}
 {% endif %}
 
-<img src="{{ site.url }}/public/img/clients_new.PNG">
+<img src="{{ site.url }}/public/img/clients.PNG">
