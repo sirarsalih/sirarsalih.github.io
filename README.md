@@ -1,4 +1,4 @@
-# Setup
+# Setup Option 1
 
 I used the [Hydejack](http://qwtel.com/hydejack/) [Jekyll](http://jekyllrb.com) theme for this blog. Here are the steps required to set up the development environment:
 
@@ -19,6 +19,10 @@ gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin/i
 
 - Make sure to register an account at Disqus to enable blog comments: https://disqus.com/
 - Make sure to register a site at Disqus using your Disqus account: https://disqus.com/admin/create/ 
+
+# Setup Option 2
+
+Go through the steps [here](https://sirarsalih.com/2016/06/19/setting-up-jekyll-and-github-pages-successfully-on-windows/).
 
 # Hydejack
 
