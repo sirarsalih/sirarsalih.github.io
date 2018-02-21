@@ -75,7 +75,7 @@ color: '#949667'
 
 ### How to Add a New Post
 
-Simply add a new post to `/_posts/` with the following title format:
+Simply add a new post to the `_posts` folder with the following title format:
 
 ~~~yml
     YYYY-MM-DD-title-of-post
