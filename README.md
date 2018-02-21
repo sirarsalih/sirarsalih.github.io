@@ -73,6 +73,14 @@ image: http://qwtel.com/hydejack/public/img/hyde.jpg
 color: '#949667'
 ~~~
 
+### How to Add a New Post
+
+Simply add a new post to `/_posts/` with the following title format:
+
+~~~yml
+    YYYY-MM-DD-title-of-post
+~~~
+
 ### How to Add a New Tag
 
 Tags are not meant to be used #instagram #style: #food #goodfood #happy #happylife #didimentionfood #yougetthepoint, as each tag requires some setup work. I tend to think of it as categories that can be combined.
