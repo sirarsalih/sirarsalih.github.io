@@ -9,7 +9,7 @@ Go through the steps [here](https://sirarsalih.com/2016/06/19/setting-up-jekyll-
 - Fork this repo
 - Setting up Jekyll on Windows: https://jekyllrb.com/docs/windows/ (if the Ruby development kit installation fails, then install it from here: http://jekyll-windows.juthilo.com/1-ruby-and-devkit/)
 - Setting up GitHub pages with Jekyll: https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
-- On Windows, make sure your Gemfile looks like this:
+- On Windows, make sure your Gemfile (in the root directory) looks like this:
 
 ```
 source 'http://rubygems.org'
