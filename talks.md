@@ -11,6 +11,8 @@ title: Talks
 
 [**NNUG Oslo 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://www.meetup.com/nnugoslo/)
 
+[**DDD Wales 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://www.dddwales.com/)
+
 [**JavaZone 2016**, Let's overengineer the hell out of this](https://2016.javazone.no/program/lets-overengineer-the-hell-out-of-this)
 
 [**AngularJS Oslo 2015**, Angular 2 + TypeScript = true. Let's Play!](https://vimeo.com/139748385)
