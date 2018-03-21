@@ -122,19 +122,16 @@ public Job(string connectionString)
 Here is how to upload a JSON blob to the blob container:
 
 ```csharp
-public void UploadJsonBlobToContainer(string blobName, object json)
+var cloudBlockBlob = _cloudBlobContainer.GetBlockBlobReference(blobName);
+cloudBlockBlob.Properties.ContentType = "application/json";
+using (var ms = new MemoryStream())
 {
-    var cloudBlockBlob = _cloudBlobContainer.GetBlockBlobReference(blobName);
-    cloudBlockBlob.Properties.ContentType = "application/json";
-    using (var ms = new MemoryStream())
-    {
-        var j = JsonConvert.SerializeObject(json);
-        var writer = new StreamWriter(ms);
-        writer.Write(j);
-        writer.Flush();
-        ms.Position = 0;
-        cloudBlockBlob.UploadFromStream(ms);
-    }
+    var j = JsonConvert.SerializeObject(json);
+    var writer = new StreamWriter(ms);
+    writer.Write(j);
+    writer.Flush();
+    ms.Position = 0;
+    cloudBlockBlob.UploadFromStream(ms);
 }
 ```
 
