@@ -126,7 +126,6 @@ public void UploadJsonBlobToContainer(string blobName, object json)
 {
     var cloudBlockBlob = _cloudBlobContainer.GetBlockBlobReference(blobName);
     cloudBlockBlob.Properties.ContentType = "application/json";
-
     using (var ms = new MemoryStream())
     {
         var j = JsonConvert.SerializeObject(json);
