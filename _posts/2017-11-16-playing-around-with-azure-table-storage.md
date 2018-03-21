@@ -101,6 +101,57 @@ var deleteOperation = TableOperation.Delete(deleteEntity);
 await _cloudTable.ExecuteAsync(deleteOperation);
 ```
 
-Those are the basic operations which help you get up and running with Azure table storage. In addition, I recommend downloading [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) which is a tool to help you manage your tables. For more information on table storage, you can always check out the [official Microsoft documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/table-storage-how-to-use-dotnet).
+Those are the basic operations which help you get up and running with Azure table storage. 
+
+### Blob containers
+
+In addition, with table storage you can create blob containers where you can store blobs with JSON and/or other file formats. This is very handy. Here is an example of a <code>Job</code> class showing how to create a blob container and connect to it (note that we showed how to build a connection string earlier in this article):
+
+```csharp
+private const string CustomersContainerName = "customers";
+private static CloudBlobContainer _cloudBlobContainer;
+public Job(string connectionString)
+{
+    var cloudStorageAccount = CloudStorageAccount.Parse(connectionString);
+    var cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
+    _cloudBlobContainer = cloudBlobClient.GetContainerReference(CustomersContainerName);
+    if (!_cloudBlobContainer.Exists()) _cloudBlobContainer.Create();            
+}
+```
+
+Here is how to upload a JSON blob to the blob container:
+
+```csharp
+public void UploadJsonBlobToContainer(string blobName, object json)
+{
+    var cloudBlockBlob = _cloudBlobContainer.GetBlockBlobReference(blobName);
+    cloudBlockBlob.Properties.ContentType = "application/json";
+
+    using (var ms = new MemoryStream())
+    {
+        var j = JsonConvert.SerializeObject(json);
+        var writer = new StreamWriter(ms);
+        writer.Write(j);
+        writer.Flush();
+        ms.Position = 0;
+        cloudBlockBlob.UploadFromStream(ms);
+    }
+}
+```
+
+Getting a blob from the blob container is very straightforward (make sure that <code>blobName</code> includes the file format):
+
+```csharp
+var cloudBlockBlob = _cloudBlobContainer.GetBlockBlobReference(blobName);
+```
+
+And finally, here is how to delete a blob from the blob container; first retrieve the blob then delete it (again, make sure that <code>blobName</code> includes the file format):
+
+```csharp
+var cloudBlockBlob = _cloudBlobContainer.GetBlockBlobReference(blobName);
+await cloudBlockBlob.DeleteIfExistsAsync();
+```
+
+I recommend downloading [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) which is a tool to help you manage your tables. For more information on table storage, you can always check out the [official Microsoft documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/table-storage-how-to-use-dotnet).
 
 Hope you enjoyed this!
