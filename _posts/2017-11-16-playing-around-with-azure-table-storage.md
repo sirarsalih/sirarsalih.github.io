@@ -138,10 +138,11 @@ public void UploadJsonBlobToContainer(string blobName, object json)
 }
 ```
 
-Getting a blob from the blob container is very straightforward (make sure that <code>blobName</code> includes the file format):
+Here is how to download a blob from the blob container (make sure that <code>blobName</code> includes the file format):
 
 ```csharp
 var cloudBlockBlob = _cloudBlobContainer.GetBlockBlobReference(blobName);
+await cloudBlockBlob.DownloadToFileAsync("C:\Documents\customer.json", FileMode.Create);
 ```
 
 And finally, here is how to delete a blob from the blob container; first retrieve the blob then delete it (again, make sure that <code>blobName</code> includes the file format):
