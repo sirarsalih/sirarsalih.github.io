@@ -149,6 +149,58 @@ var cloudBlockBlob = _cloudBlobContainer.GetBlockBlobReference(blobName);
 await cloudBlockBlob.DeleteIfExistsAsync();
 ```
 
+### Queues
+
+Queues are used for asynchronous messaging between application components in the cloud, a queue is a service for storing messages that can be accessed from anywhere. A single queue message is up to 64 KB in size and a queue can contain millions of messages. Here is another example of a <code>Job</code> class, this time showing how to create a queue and connect to it (again, note that we showed how to build a connection string earlier in this article):
+
+```csharp
+private const string queueName = "queue";
+private static CloudQueue _cloudQueue;
+public Job(string connectionString)
+{
+    var cloudStorageAccount = CloudStorageAccount.Parse(connectionString);
+    var cloudQueueClient = cloudStorageAccount.CreateCloudQueueClient();
+    _cloudQueue = cloudQueueClient.GetQueueReference(queueName);
+    _cloudQueue.CreateIfNotExists();           
+}
+```
+
+Here is how to insert a message into the queue:
+
+```csharp
+var cloudQueueMessage = new CloudQueueMessage("Hello, Jon Snow!");
+await _cloudQueue.AddMessageAsync(cloudQueueMessage);
+```
+
+Here is how to peek at the message in the front of the queue (without removing it):
+
+```csharp
+var cloudQueueMessage = await _cloudQueue.PeekMessageAsync();
+Console.WriteLine(cloudQueueMessage.AsString);
+```
+
+Here is how to update the content of a message in the front of the queue (then make it invisible for 60 seconds so that others can work with the original content during that time):
+
+```csharp
+var cloudQueueMessage = await _cloudQueue.GetMessageAsync();
+cloudQueueMessage.SetMessageContent("New content.");
+_cloudQueue.UpdateMessage(cloudQueueMessage, TimeSpan.FromSeconds(60.0), MessageUpdateFields.Content | MessageUpdateFields.Visibility);
+```
+
+Here is how to delete a message from the front of the queue:
+
+```csharp
+var cloudQueueMessage = await _cloudQueue.GetMessageAsync();
+await _cloudQueue.DeleteMessageAsync(cloudQueueMessage);
+```
+
+And finally, here is how to get the total number of messages in the queue:
+
+```csharp
+_cloudQueue.FetchAttributes();
+var messageCount = _cloudQueue.ApproximateMessageCount;
+```
+
 I recommend downloading [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) which is a tool to help you manage your tables. For more information on table storage, you can always check out the [official Microsoft documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/table-storage-how-to-use-dotnet).
 
 Hope you enjoyed this!
