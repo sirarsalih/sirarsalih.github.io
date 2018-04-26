@@ -9,11 +9,11 @@ title: Talks
 
 [**SATURN 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://resources.sei.cmu.edu/news-events/events/saturn/)
 
-[**NNUG Oslo 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://www.meetup.com/NNUGOslo/events/249382809/)
+[**NNUG Oslo 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://vimeo.com/266489306)
 
 [**DDD Wales 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://www.dddwales.com/)
 
-[**JavaZone 2016**, Let's overengineer the hell out of this](https://2016.javazone.no/program/lets-overengineer-the-hell-out-of-this)
+[**JavaZone 2016**, Let's overengineer the hell out of this](https://vimeo.com/182058460)
 
 [**AngularJS Oslo 2015**, Angular 2 + TypeScript = true. Let's Play!](https://vimeo.com/139748385)
 
@@ -23,7 +23,7 @@ title: Talks
 
 [**AngularJS Oslo 2014**, Test Driving AngularJS](https://vimeo.com/109831868)
 
-[**Abakus NTNU 2014**, Internet of Things Rise of the Drones](https://abakus.no/event/1405-itera-internet-of-things-rise-of-the-drones/)
+[**Abakus NTNU 2014**, Internet of Things Rise of the Drones](https://abakus.no/events/1405)
 
 [**JavaZone 2014**, TDD with AngularJS and TypeScript](https://2014.javazone.no/presentation.html?id=e72daf93)
 
