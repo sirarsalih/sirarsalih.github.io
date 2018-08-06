@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Joining the Azure User Group Norway Board
-tags: [misc]
+tags: [azure, misc]
 ---
 
 
