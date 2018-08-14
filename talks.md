@@ -7,7 +7,7 @@ title: Talks
   ![{{ site.author.name }}]({{ site.author.photo }}){:.me}
 {% endif %}
 
-[**SATURN 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://resources.sei.cmu.edu/news-events/events/saturn/)
+[**SATURN 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://www.youtube.com/watch?v=hzigexekC9s)
 
 [**NNUG Oslo 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://vimeo.com/266489306)
 
