@@ -7,6 +7,10 @@ title: Talks
   ![{{ site.author.name }}]({{ site.author.photo }}){:.me}
 {% endif %}
 
+[**Build Stuff 2018**, Two Tales: The time when I flew drones and when I talked to the cookie monster using Node at the Norwegian Parliament](https://www.buildstuff.lt/)
+
+[**Mobile Era Conference 2018**, Azure Cosmos DB: A look at the Universe](https://mobileera.rocks/)
+
 [**SATURN 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://www.youtube.com/watch?v=hzigexekC9s)
 
 [**NNUG Oslo 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://vimeo.com/266489306)
