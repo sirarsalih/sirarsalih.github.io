@@ -7,11 +7,13 @@ title: Talks
   ![{{ site.author.name }}]({{ site.author.photo }}){:.me}
 {% endif %}
 
+[**NNUG Oslo 2019**, Two Tales: The time when I flew drones and when I talked to the cookie monster using Node at the Norwegian Parliament](https://vimeo.com/312668587)
+
 [**Azure User Group Norway 2019**, The Azure NoSQL Evolution: Azure Table Storage vs. Azure Cosmos DB](https://www.meetup.com/Azure-User-Group-Norway/events/256740919/)
 
 [**Making Software 2018**, Azure Cosmos DB: A look at the Universe](https://www.youtube.com/watch?v=Jk2P8fMAVWg&t=630s)
 
-[**Build Stuff 2018**, Two Tales: The time when I flew drones and when I talked to the cookie monster using Node at the Norwegian Parliament](https://www.buildstuff.lt/)
+[**Build Stuff 2018**, Two Tales: The time when I flew drones and when I talked to the cookie monster using Node at the Norwegian Parliament](https://www.youtube.com/watch?v=3lSbuPyMH-Q)
 
 [**Mobile Era Conference 2018**, Azure Cosmos DB: A look at the Universe](https://vimeo.com/299673609)
 
