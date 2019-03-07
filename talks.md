@@ -7,6 +7,8 @@ title: Talks
   ![{{ site.author.name }}]({{ site.author.photo }}){:.me}
 {% endif %}
 
+[**NNUG Oslo 2019**, Setting up CI/CD for your Azure Functions in Azure DevOps](https://www.meetup.com/NNUGOslo/events/259085576/)
+
 [**NNUG Oslo 2019**, Two Tales: The time when I flew drones and when I talked to the cookie monster using Node at the Norwegian Parliament](https://vimeo.com/312668587)
 
 [**Azure User Group Norway 2019**, The Azure NoSQL Evolution: Azure Table Storage vs. Azure Cosmos DB](https://www.meetup.com/Azure-User-Group-Norway/events/256740919/)
@@ -16,6 +18,8 @@ title: Talks
 [**Build Stuff 2018**, Two Tales: The time when I flew drones and when I talked to the cookie monster using Node at the Norwegian Parliament](https://www.youtube.com/watch?v=3lSbuPyMH-Q)
 
 [**Mobile Era Conference 2018**, Azure Cosmos DB: A look at the Universe](https://vimeo.com/299673609)
+
+[**Developer on Fire 2018**, Lit Up on Community](https://developeronfire.com/podcast/episode-354-sirar-salih-lit-up-on-community)
 
 [**SATURN 2018**, Azure Table storage: The Good, the Bad, the Ugly](https://www.youtube.com/watch?v=hzigexekC9s)
 
