@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Securing your front-end payload with RSA encryption using OpenSSL, jsencrypt and Azure Key Vault
-tags: [azure]
+tags: [js, dotnet, azure]
 ---
 
 Security is very important in software development, I have been working intensively on security recently and I thought that I would write a blog post on encryption. Even though your network traffic is usually secured with SSL encryption, there is a high chance that a hacker will use SSL decryption tools and be able to sniff your traffic in clear text. In such cases it's very smart to protect your payload with additional encryption. In this blog post I will explain how to encrypt the payload coming from your front-end with RSA encryption and how to decrypt it in your back-end.
