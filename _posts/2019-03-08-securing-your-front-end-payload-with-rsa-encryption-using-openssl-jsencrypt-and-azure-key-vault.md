@@ -11,6 +11,7 @@ In this case we assume that our front-end is a React application with ASP.NET Co
 In JavaScript we can use [jsencrypt](https://www.npmjs.com/package/jsencrypt) to do the RSA encryption, which I think is a good library for doing this. The typical encryption/decryption flow looks like this:
 
 [<img src="{{ site.url }}/public/img/encrypt_decrypt.png">]({{site.url}}/public/img/encrypt_decrypt.png)
+*A typical encryption/decryption flow using public and private keys. Figure credit: [SSL2Buy](https://www.ssl2buy.com).*
 
 A public key, known to all users of your application, is used for encryption. A private key, known only to you - the provider - is used for decryption. So before we get started, we need to generate public/private key pairs and a certificate. [OpenSSL](https://www.openssl.org/) is an excellent tool for doing this, so with this tool we can create a private key and certificate PEM files:
 
@@ -18,7 +19,7 @@ A public key, known to all users of your application, is used for encryption. A 
 openssl req -newkey rsa:1024 -nodes -keyout private_key.pem -x509 -days 365 -out certificate.pem
 ```
 
-Make note of the arguments; we're applying RSA 1024-bit encryption. When you run this command, you get asked to provide personal information that will be incorporated to the certificate:
+Make note of the arguments; we're applying RSA 1024-bit encryption. When you run this command, you get asked to provide personal information that will be incorporated into the certificate:
 
 [<img src="{{ site.url }}/public/img/private_key_info.png">]({{site.url}}/public/img/private_key_info.png)
 
@@ -148,7 +149,21 @@ handleSubmit = event => {
 }
 ```
 
-We have now completed the encryption part in the front-end and are ready to start on the decryption in the back-end. We start by fetching the base64 string of the certificate PFX file in Azure Key Vault, convert that to a ```X509Certificate2``` object, get the private key from that object and proceed to do the RSA decryption in C#:
+As seen from the code, we first create a JSON object with the content. For example:
+
+```javascript
+{"Message":"Hello world!"}
+```
+
+We then encrypt that object, in this case it looks like this after encryption:
+
+```
+YvFKXD+qxWXvtD8czxDA60LFUKkGr/4bgu+adt4uYdb43cvgGy4h9cUzIlxStX2q/uHe0LNBah4fyCMVWOYANigUFz29eCxNTWykO01WGCl+A1YNL8i3g1OMfBVi2yewiJRv0d37crWy+ZET8IBwajSt8WZivN5Wr9fJXMCp5cU=
+```
+
+We then wrap the encrypted object inside another JSON object so we can POST the JSON to the back-end. 
+
+We are now ready to start the decryption process in the back-end. We do that by fetching the base64 string of the certificate PFX file in Azure Key Vault, convert that to a ```X509Certificate2``` object, get the private key from that object and proceed to do the RSA decryption in C#:
 
 ```csharp
 [HttpPost("Home/Submit")]
@@ -159,20 +174,7 @@ public async Task<IActionResult> Submit([FromBody]Wrapper wrapperJson)
     var rsaCng = (RSACng)cert.PrivateKey;
     var decryptedMessageJson = Encoding.UTF8.GetString(rsaCng.Decrypt(Convert.FromBase64String(wrapperJson.EncryptedMessageJson), RSAEncryptionPadding.Pkcs1));
 }
-```
 
-Here is how the ```Wrapper``` object looks like:
-
-```csharp
-public class Wrapper
-{
-    public string EncryptedMessageJson { get; set; }
-}
-```
-
-And here is how we fetch the certificate from Azure Key Vault:
-
-```csharp
 private async Task<X509Certificate2> GetCertificateAsync()
 {
     var azureServiceTokenProvider = new AzureServiceTokenProvider();
@@ -183,6 +185,15 @@ private async Task<X509Certificate2> GetCertificateAsync()
     var coll = new X509Certificate2Collection();
     coll.Import(bytes, "certificatePassword", X509KeyStorageFlags.Exportable);
     return coll[0];
+}
+```
+
+Here is how the ```Wrapper``` object looks like:
+
+```csharp
+public class Wrapper
+{
+    public string EncryptedMessageJson { get; set; }
 }
 ```
 
