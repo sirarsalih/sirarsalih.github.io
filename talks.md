@@ -7,6 +7,14 @@ title: Talks
   ![{{ site.author.name }}]({{ site.author.photo }}){:.me}
 {% endif %}
 
+[**Cloud Developer Days 2019**, Setting up CI/CD for your Azure Functions in Azure DevOps](http://cloud.developerdays.pl/)
+
+[**Cloud Developer Days 2019**, The Azure NoSQL Evolution: Azure Table Storage vs. Azure Cosmos DB](http://cloud.developerdays.pl/)
+
+[**Azure User Group Norway 2019**, Setting up CI/CD for your Azure Functions in Azure DevOps](https://www.meetup.com/Azure-User-Group-Norway/events/hqhggqyzfbkc/)
+
+[**DevOps Nigeria Meetup 2019**, Setting up CI/CD for your Azure Functions in Azure DevOps](https://www.meetup.com/DevOps-Lagos-Meetup/events/259418855/)
+
 [**NNUG Oslo 2019**, Setting up CI/CD for your Azure Functions in Azure DevOps](https://www.meetup.com/NNUGOslo/events/259085576/)
 
 [**NNUG Oslo 2019**, Two Tales: The time when I flew drones and when I talked to the cookie monster using Node at the Norwegian Parliament](https://vimeo.com/312668587)
