@@ -183,7 +183,7 @@ private async Task<X509Certificate2> GetCertificateAsync()
     var pfxBase64 = secret.Value;
     var bytes = Convert.FromBase64String(pfxBase64);
     var coll = new X509Certificate2Collection();
-    coll.Import(bytes, "certificatePassword", X509KeyStorageFlags.Exportable);
+    coll.Import(bytes, "certificatePassword", X509KeyStorageFlags.PersistKeySet | X509KeyStorageFlags.MachineKeySet);
     return coll[0];
 }
 ```
