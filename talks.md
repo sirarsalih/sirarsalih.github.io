@@ -7,9 +7,15 @@ title: Talks
   ![{{ site.author.name }}]({{ site.author.photo }}){:.me}
 {% endif %}
 
+[**Berlin Buzzwords 2019**, Not automating Tinder in the Cloud and the day I didn't break Tinder by accident](https://berlinbuzzwords.de/)
+
 [**Cloud Developer Days 2019**, Setting up CI/CD for your Azure Functions in Azure DevOps](http://cloud.developerdays.pl/)
 
 [**Cloud Developer Days 2019**, The Azure NoSQL Evolution: Azure Table Storage vs. Azure Cosmos DB](http://cloud.developerdays.pl/)
+
+[**Build Stuff Spain 2019**, Not automating Tinder in the Cloud and the day I didn't break Tinder by accident](https://www.buildstuff.es/)
+
+[**Build Stuff Spain 2019**, Setting up CI/CD for your Azure Functions in Azure DevOps](https://www.buildstuff.es/)
 
 [**Azure User Group Norway 2019**, Setting up CI/CD for your Azure Functions in Azure DevOps](https://www.meetup.com/Azure-User-Group-Norway/events/hqhggqyzfbkc/)
 
@@ -23,7 +29,7 @@ title: Talks
 
 [**Making Software 2018**, Azure Cosmos DB: A look at the Universe](https://www.youtube.com/watch?v=Jk2P8fMAVWg&t=630s)
 
-[**Build Stuff 2018**, Two Tales: The time when I flew drones and when I talked to the cookie monster using Node at the Norwegian Parliament](https://www.youtube.com/watch?v=3lSbuPyMH-Q)
+[**Build Stuff Lithuania 2018**, Two Tales: The time when I flew drones and when I talked to the cookie monster using Node at the Norwegian Parliament](https://www.youtube.com/watch?v=3lSbuPyMH-Q)
 
 [**Mobile Era Conference 2018**, Azure Cosmos DB: A look at the Universe](https://vimeo.com/299673609)
 
