@@ -307,7 +307,7 @@ a:focus::before {
 
 @media (min-width: 48em) {
   .content {
-    max-width: 38rem;
+    max-width: 100rem;
     margin-left: 20rem;
     margin-right: 2rem;
     border-left: none;
