@@ -9,6 +9,8 @@ title: Talks
 
 [**Berlin Buzzwords 2019**, Not automating Tinder in the Cloud and the day I didn't break Tinder by accident](https://berlinbuzzwords.de/)
 
+[**Bitshift 2019**, Setting up CI/CD for your Azure Functions in Azure DevOps](https://www.meetup.com/BitShift/events/260997238/)
+
 [**Cloud Developer Days 2019**, Setting up CI/CD for your Azure Functions in Azure DevOps](http://cloud.developerdays.pl/)
 
 [**Cloud Developer Days 2019**, The Azure NoSQL Evolution: Azure Table Storage vs. Azure Cosmos DB](http://cloud.developerdays.pl/)
