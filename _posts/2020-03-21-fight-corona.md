@@ -11,7 +11,7 @@ One week ago I was contacted by CEO of Me Data AS, [Louise Helliksen](https://tw
 [<img src="{{ site.url }}/public/img/fight_corona.png">](https://world-citizen-report.com/)
 *World-citizen-report.com*
 
-Security is without doubt a crucial part in this project and on board is no other than CSO of Nordic Choice Hotels, [Per Torsheim](https://twitter.com/thorsheim), in addition to a group of rockstar developers and a UX designer. I find it really cool to be part of this dream team working on something that is so greater than all of us; we are literally trying to save the world with technology. [World-Citizen-Report](https://world-citizen-report.com/) is created for the citizens of the world, so we can get a better overview of this ongoing pandemic and do our part in technology to help the heroes in the health industry.
+Security is without doubt a crucial part in this project and on board is no other than CSO of Nordic Choice Hotels, [Per Thorsheim](https://twitter.com/thorsheim), in addition to a group of rockstar developers and a UX designer. I find it really cool to be part of this dream team working on something that is so greater than all of us; we are literally trying to save the world with technology. [World-Citizen-Report](https://world-citizen-report.com/) is created for the citizens of the world, so we can get a better overview of this ongoing pandemic and do our part in technology to help the heroes in the health industry.
 
 Now, it's time for me to go back to coding as we are working against the clock. 
 
