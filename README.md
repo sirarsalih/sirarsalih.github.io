@@ -26,7 +26,7 @@ gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin/i
 
 # Setup SSL with Cloudflare 
 
-Login or create an account at [Cloudflare](https://cloudflare.com) to setup SSL for your new site.
+Create an account or login at [Cloudflare](https://cloudflare.com) to setup SSL for your new site.
 
 # Hydejack
 
