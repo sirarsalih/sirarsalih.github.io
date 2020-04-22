@@ -24,9 +24,9 @@ gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin/i
 - Make sure to register an account at Disqus to enable blog comments: https://disqus.com/
 - Make sure to register a site at Disqus using your Disqus account: https://disqus.com/admin/create/ 
 
-# Setup SSL with CloudFlare 
+# Setup SSL with Cloudflare 
 
-Login at [CloudFlare](https://cloudflare.com) to do the process for your new site.
+Login or create an account at [Cloudflare](https://cloudflare.com) to setup SSL for your new site.
 
 # Hydejack
 
