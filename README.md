@@ -24,6 +24,10 @@ gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin/i
 - Make sure to register an account at Disqus to enable blog comments: https://disqus.com/
 - Make sure to register a site at Disqus using your Disqus account: https://disqus.com/admin/create/ 
 
+# Setup SSL with CloudFlare 
+
+Login at [CloudFlare](https://cloudflare.com) to do the process for your new site.
+
 # Hydejack
 
 Hydejack is a pretentious two-column [Jekyll](http://jekyllrb.com) theme, stolen by [`@qwtel`](https://twitter.com/qwtel) from [Hyde](http://hyde.getpoole.com). You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
