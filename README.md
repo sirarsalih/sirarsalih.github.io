@@ -30,13 +30,17 @@ Create an account or login at [Cloudflare](https://cloudflare.com) to setup SSL 
 
 Cloudflare's name servers (NS) need to be added at the registrar site (GoDaddy):
 
+```
 amy.ns.cloudflare.com
 frank.ns.cloudflare.com
+```
 
 GitHub's IP addresses need to be added as A records at the SSL provider site (Cloudflare):
 
+```
 A sirarsalih.com 192.30.252.153
 A sirarsalih.com 192.30.252.154
+```
 
 # Hydejack
 
