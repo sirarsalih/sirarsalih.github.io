@@ -24,9 +24,19 @@ gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin/i
 - Make sure to register an account at Disqus to enable blog comments: https://disqus.com/
 - Make sure to register a site at Disqus using your Disqus account: https://disqus.com/admin/create/ 
 
-# Setup SSL with Cloudflare 
+# Setup SSL with Cloudflare, add NS and A records
 
 Create an account or login at [Cloudflare](https://cloudflare.com) to setup SSL for your new site.
+
+Cloudflare's name servers (NS) need to be added at the registrar site (GoDaddy):
+
+amy.ns.cloudflare.com
+frank.ns.cloudflare.com
+
+GitHub's IP addresses need to be added as A records at the SSL provider site (Cloudflare):
+
+A sirarsalih.com 192.30.252.153
+A sirarsalih.com 192.30.252.154
 
 # Hydejack
 
