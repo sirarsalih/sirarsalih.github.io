@@ -44,7 +44,7 @@ A sirarsalih.com 192.30.252.154
 
 Always use HTTPS (CloudFlare):
 
-[HTTPS only option](public/img/https_only.png)
+public/img/https_only.png
 
 
 # Hydejack
