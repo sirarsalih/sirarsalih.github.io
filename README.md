@@ -28,7 +28,7 @@ gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin/i
 
 Create an account or login at [Cloudflare](https://cloudflare.com) to setup SSL for your new site.
 
-Cloudflare's name servers (NS) need to be added at the registrar site (GoDaddy):
+Cloudflare's name servers (NS) need to replace the default ones at the registrar site (GoDaddy):
 
 ```
 amy.ns.cloudflare.com
@@ -41,6 +41,11 @@ GitHub's IP addresses need to be added as A records at the SSL provider site (Cl
 A sirarsalih.com 192.30.252.153
 A sirarsalih.com 192.30.252.154
 ```
+
+Always use HTTPS (CloudFlare):
+
+[HTTPS only option](public/img/https_only.png)
+
 
 # Hydejack
 
