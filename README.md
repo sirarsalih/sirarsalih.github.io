@@ -44,7 +44,7 @@ A sirarsalih.com 192.30.252.154
 
 Always use HTTPS (CloudFlare):
 
-<img src="{{ site.url }}/public/img/https_only.png"/>
+<img src="{{ site.url }}/public/img/https_only.png"></img>
 
 # Hydejack
 
