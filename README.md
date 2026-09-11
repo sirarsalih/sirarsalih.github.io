@@ -1,3 +1,5 @@
+# Blog
+
 I used the [Hydejack](http://qwtel.com/hydejack/) theme for this blog, built with [Jekyll](http://jekyllrb.com). The setup options below explain step-by-step how to set up the development environment on Windows.
 
 # Setup Option 1
